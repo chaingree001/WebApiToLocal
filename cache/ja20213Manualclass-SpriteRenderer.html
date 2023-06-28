@@ -1,0 +1,386 @@
+<!DOCTYPE html><html class="no-js" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Sprite Renderer - Unity マニュアル">
+<title>Sprite Renderer - Unity マニュアル</title>
+<meta property="og:image" content="https://docs.unity.cn/ja/2021.3/uploads/Main/2D_SpriteRenderer_1.png">
+<meta name="description" content="Sprite Renderer コンポーネントは スプライト をレンダリングし、2D と 3D プロジェクト のシーンでそれらをどのように表示するかを制御します。">
+<meta property="og:description" content="Sprite Renderer コンポーネントは スプライト をレンダリングし、2D と 3D プロジェクト のシーンでそれらをどのように表示するかを制御します。">
+<meta name="author" content="ユニティ テクノロジーズ">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'ja';
+      var page = 'class-SpriteRenderer';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><script type="text/javascript" src="../StaticFiles/js/tinysegmenter.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/ja/2021.3/Manual/class-SpriteRenderer.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/class-SpriteRenderer.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/class-SpriteRenderer.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/class-SpriteRenderer.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/class-SpriteRenderer.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/class-SpriteRenderer.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/class-SpriteRenderer.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/class-SpriteRenderer.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="マニュアル内を検索…" autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">マニュアル</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">スクリプトリファレンス</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/ja/2022.1/Manual/class-SpriteRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/ja/2021.3/Manual/class-SpriteRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/ja/2021.2/Manual/class-SpriteRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/ja/2021.1/Manual/class-SpriteRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/ja/2020.3/Manual/class-SpriteRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/ja/2020.2/Manual/class-SpriteRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/ja/2020.1/Manual/class-SpriteRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/ja/2019.4/Manual/class-SpriteRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/ja/2019.3/Manual/class-SpriteRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/ja/2019.2/Manual/class-SpriteRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/ja/2019.1/Manual/class-SpriteRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/ja/2018.4/Manual/class-SpriteRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/ja/2018.3/Manual/class-SpriteRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/ja/2018.2/Manual/class-SpriteRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/ja/2018.1/Manual/class-SpriteRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/ja/2017.4/Manual/class-SpriteRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/ja/2017.3/Manual/class-SpriteRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/ja/2017.2/Manual/class-SpriteRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/ja/2017.1/Manual/class-SpriteRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/ja/560/Manual/class-SpriteRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>このページを含むバージョン:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>このページを含まないバージョン:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>サポートあり</li>
+<li>
+<div class="legacy-box"></div>サポートなし、非推奨</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">マニュアル</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">スクリプトリファレンス</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">言語:
+        <span class="b">日本語</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/class-SpriteRenderer.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/class-SpriteRenderer.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/class-SpriteRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/class-SpriteRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/class-SpriteRenderer.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/class-SpriteRenderer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>マニュアル</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/ja/2022.1/Manual/class-SpriteRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/ja/2021.3/Manual/class-SpriteRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/ja/2021.2/Manual/class-SpriteRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/ja/2021.1/Manual/class-SpriteRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/ja/2020.3/Manual/class-SpriteRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/ja/2020.2/Manual/class-SpriteRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/ja/2020.1/Manual/class-SpriteRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/ja/2019.4/Manual/class-SpriteRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/ja/2019.3/Manual/class-SpriteRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/ja/2019.2/Manual/class-SpriteRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/ja/2019.1/Manual/class-SpriteRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/ja/2018.4/Manual/class-SpriteRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/ja/2018.3/Manual/class-SpriteRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/ja/2018.2/Manual/class-SpriteRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/ja/2018.1/Manual/class-SpriteRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/ja/2017.4/Manual/class-SpriteRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/ja/2017.3/Manual/class-SpriteRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/ja/2017.2/Manual/class-SpriteRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/ja/2017.1/Manual/class-SpriteRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/ja/560/Manual/class-SpriteRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>このページを含むバージョン:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>このページを含まないバージョン:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>サポートあり</li>
+<li>
+<div class="legacy-box"></div>サポートなし、非推奨</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.3 (LTS)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">スプライト</a></li>
+<li>Sprite Renderer</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Sprites.html"></a></span><div class="tip">スプライト</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpriteCreator.html"></a></span><div class="tip">Sprite Creator</div>
+</div>
+</div></div>
+<h1>Sprite Renderer</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Sprite Renderer</strong> コンポーネントは <strong>スプライト</strong> をレンダリングし、<a href="https://docs.unity.cn/Manual/2Dor3D.html">2D と 3D プロジェクト</a> のシーンでそれらをどのように表示するかを制御します。</p>
+
+<p>スプライトを作成すると (<strong>GameObject &gt; 2D Object &gt; Sprite</strong>)、Unity は自動的に、<strong>Sprite Renderer</strong> コンポーネントを持つゲームオブジェクトを作成します。<strong>Components</strong> メニュー (<strong>Component &gt; Rendering &gt; Sprite Renderer</strong>) を使って、既存のゲームオブジェクトに <strong>Sprite Renderer</strong> コンポーネントを加えることもできます。</p>
+
+<h2>プロパティ</h2>
+
+<figure>
+<img src="../uploads/Main/2D_SpriteRenderer_1.png" alt="Sprite Renderer インスペクター">
+<figcaption>Sprite Renderer インスペクター</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>プロパティ</em></strong></th>
+	<th style="text-align:left;"><strong><em>機能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Sprite</strong></td>
+	<td style="text-align:left;">どのスプライトテクスチャをレンダリングするかを定義します。右端の小さな丸いアイコンをクリックするとウィンドウが開き、使用可能なスプライトアセットのリストから選択することができます。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color</strong></td>
+	<td style="text-align:left;">スプライトの頂点カラーを定義します。これを使って、スプライトの画像の着色や色の変更ができます。カラーピッカーを使用して、レンダリングされたスプライトテクスチャの頂点カラーを設定します。詳しくは、この表の下の <a href="#color">Color</a> セクションを参照してください。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flip</strong></td>
+	<td style="text-align:left;">チェックした軸にそってスプライトテクスチャを反転します。ゲームオブジェクトの Transform 位置は反転しません。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Material</strong></td>
+	<td style="text-align:left;">スプライトテクスチャをレンダリングする <a href="#material">マテリアル</a> を定義します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Draw Mode</strong></td>
+	<td style="text-align:left;">スプライトの寸法を変えるときにスプライトをどのようにスケールするかを設定します。ドロップダウンから以下のうち 1 つを選択します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   Simple</td>
+	<td style="text-align:left;">寸法を変えると画像が全方向にスケールされます。これがデフォルトの選択肢です。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   Sliced</td>
+	<td style="text-align:left;">スプライトが <a href="https://docs.unity.cn/Manual/9SliceSprites.html">9 スライス</a> の場合はこれを選択します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">       Size          <em>(‘Sliced’ or ‘Tiled’)</em>
+</td>
+	<td style="text-align:left;">スプライトの新しい Width と Height を入力して、正しく 9 スライスのスプライトをスケールします。また、<a href="https://docs.unity.cn/Manual/9SliceSprites.html">Rect Transform</a> を使って 9 スライスのプロパティを適用しながらスプライトをスケールできます。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   Tiled</td>
+	<td style="text-align:left;">デフォルトでは、このモードはサイズを変えようとすると 9 スライスのスプライトをスケールせずに、その中央部分をタイルにします。スプライトのタイル挙動を制御するには、<strong>Tile Mode</strong> を使用します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">       Continuous</td>
+	<td style="text-align:left;">これがデフォルトの <strong>Tile Mode</strong> です。Continuous モードでは、スプライトのサイズが変更されると、中央部のタイルが均等に繰り返されます。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">       Adaptive</td>
+	<td style="text-align:left;">Adaptive モードでは、スプライトのサイズが変更されると、Simple モードのようにスプライトテクスチャが引き伸ばされます。変更されたサイズのスケールが Stretch Value に達すると、中央部がタイルになり始めます。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Stretch Value</td>
+	<td style="text-align:left;">スライダーを使って 0 から 1 の間で値を設定します。最大値は 1 で、元のスプライトのスケールの 2 倍を表します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sorting Layer</strong></td>
+	<td style="text-align:left;">スプライトの <a href="https://docs.unity.cn/Manual/class-TagManager.html">Sorting Layer</a> を設定すると、レンダリングの優先順位を制御します。ドロップダウンで既存の Sorting Layer を選択するか、新しいものを作成します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Order In Layer</strong></td>
+	<td style="text-align:left;">
+<a href="https://docs.unity.cn/Manual/class-TagManager.html">Sorting Layer</a> 内のスプライトのレンダリング優先順位を設定します。 小さな数のスプライトが最初にレンダリングされ、大きな数のスプライトがそれらの上にレンダリングされます。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mask Interaction</strong></td>
+	<td style="text-align:left;">
+<a href="class-SpriteMask.html">Sprite Mask</a> と相互作用する場合に、Sprite Renderer の挙動を設定します。後述の <a href="#maskinteract">Mask Interaction</a> セクションで、異なる設定例を参照してください。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   None</td>
+	<td style="text-align:left;">スプライトレンダラーは、シーンのスプライトマスクと相互作用しません。これがデフォルトのオプションです。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   Visible Inside Mask</td>
+	<td style="text-align:left;">Sprite Mask が覆っている部分のスプライトは表示されますが、覆っていない部分は表示されません。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   Visible Outside Mask</td>
+	<td style="text-align:left;">Sprite Mask が覆っていない部分のスプライトは表示されますが、覆っている部分は表示されません。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sprite Sort Point</strong></td>
+	<td style="text-align:left;">スプライトとカメラの距離を計算する場合は、Center (中央) か Pivot (ピボット) のいずれかを選択できます。詳細は <a href="#sortpoint">Sprite Sort Point</a> を参照してください。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>詳しい説明</h2>
+
+<h3>Color<a name="color"></a>
+</h3>
+
+<p>下の画像は <strong>Sprite Renderer</strong> の Color で RGB 値を変更する効果を示しています。スプライトの不透明度を変更するには、Color プロパティのアルファ (A) チャンネルの値を変更します。</p>
+
+<figure>
+<img src="../uploads/Main/2DColor_Example.png" alt="左: 元のスプライト。 右: RGB カラーを赤に設定したスプライト。">
+<figcaption><strong>左: </strong>元のスプライト。 <strong>右</strong>: RGB カラーを赤に設定したスプライト。</figcaption>
+</figure>
+
+<h3>Material<a name="material"></a>
+</h3>
+
+<p>Unity のレンダリング方法を制御するには、<a href="https://docs.unity.cn/Manual/Materials.html">マテリアルとシェーダー設定</a> を使用します。 これらの設定の詳細については、<a href="https://docs.unity.cn/Manual/Shaders.html">マテリアル、シェーダー、テクスチャ</a> のページを参照してください。 </p>
+
+<p>新しく作成されたスプライトのデフォルトの Material は <strong>Sprites - Default</strong> です。 シーンのライトはこのデフォルトのスプライトには影響しません。 スプライトをライトに反応させるには、Material に <strong>Default - Diffuse</strong> を割り当てます。 これを行うには、Material フィールドの横にある小さな丸をクリックして Select Sprite ウィンドウを表示し、<strong>Default-Diffuse</strong> マテリアルを選択します。</p>
+
+<h3>Mask Interaction<a name="maskinteract"></a>
+</h3>
+
+<p>Mask Interaction は Sprite Renderer がどのように <a href="class-SpriteMask.html">SpriteMasks</a> と相互作用するかを制御します。ドロップダウンから <strong>Visible Inside Mask</strong> か <strong>Visible Outside Mask</strong> を選択します。</p>
+
+<p>スプライトマスクと相互作用させるには、ドロップダウンから <strong>Visible Inside Mask</strong> か <strong>Visible Outside Mask</strong> を選択します。</p>
+
+<p><img src="../uploads/Main/2D_SpriteRenderer_8.png" alt="Visible Inside Mask を使用した例">
+<img src="../uploads/Main/2D_SpriteRenderer_9.png" alt="Visible Outside Mask を使用した例"></p>
+
+<h3>Sprite Sort Point<a name="sortpoint"></a>
+</h3>
+
+<p>このプロパティは、Sprite Renderer の <strong>Draw Mode</strong> が <strong>Simple</strong> に設定されている場合にのみ利用可能です。</p>
+
+<p>2D プロジェクトでは、メインカメラはデフォルトで <a href="https://docs.unity.cn/Manual/class-Camera.html">Orthographic Projection (平行投影) モード</a> に設定されています。 このモードでは、スプライトはカメラに向かって、カメラとの距離が長い順にレンダリングされます。</p>
+
+<figure>
+<img src="../uploads/Main/2DSpriteRenderer_SortPoint.png" alt="平行投影カメラ: 横からのビュー (上) とゲームビュー (下)">
+<figcaption><strong>平行投影カメラ:</strong> 横からのビュー (上) とゲームビュー (下)</figcaption>
+</figure>
+
+<p>デフォルトでは、スプライトの <strong>Sort Point</strong> は <strong>Center</strong> (中心) に設定されています。Unity はカメラの Transform 位置とスプライトの中心との間の距離を測定してそれらのレンダリング順序を決定します。</p>
+
+<p>Center とは異なる <strong>Sort Point</strong> を設定するには、<strong>Pivot</strong> を選択します。スプライトの Pivot 位置は、<a href="https://docs.unity.cn/Manual/SpriteEditor.html">スプライトエディター</a> で編集できます。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–10–05 新しい機能の定義を追加</span></li>
+<li><span class="page-history">[2017.3](https://docs.unity.cn/2017.3/Documentation/Manual/30_search.html?q=で追加されたピボット位置を使用してスプライトベースのレンダラーをソートする機能。 newin20173)<span class="search-words"> 2017.3の新機能</span> </span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Sprites.html"></a></span><div class="tip">スプライト</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpriteCreator.html"></a></span><div class="tip">Sprite Creator</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+<script type="text/javascript">(function(){var id="io6j3s669rgbrhnozmfzh8r2mf204n7q70a";var js=document.createElement("script");js.setAttribute("type","text/javascript");js.setAttribute("src","//deploy.mopinion.com/js/pastease.js");document.getElementsByTagName("head")[0].appendChild(js);var t=setInterval(function(){try{new Pastease.load(id);clearInterval(t)}catch(e){}},50)})();</script>
+</body>
+</html>

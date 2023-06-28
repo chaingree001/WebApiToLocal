@@ -1,0 +1,372 @@
+<!DOCTYPE html><html class="no-js" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity User Manual 2021.3 (LTS) - Unity 매뉴얼">
+<title>Unity User Manual 2021.3 (LTS) - Unity 매뉴얼</title>
+<meta property="og:image" content="https://docs.unity.cn/kr/2021.3/uploads/Main/StructEditor.jpg">
+<meta name="description" content="Unity 에디터를 사용하여 2D 및 3D 게임, 앱 및 경험을 만들 수 있습니다. unity3d.com에서 에디터를 다운로드합니다.">
+<meta property="og:description" content="Unity 에디터를 사용하여 2D 및 3D 게임, 앱 및 경험을 만들 수 있습니다. unity3d.com에서 에디터를 다운로드합니다.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'kr';
+      var page = 'UnityManual';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/kr/2021.3/Manual/UnityManual.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/UnityManual.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/UnityManual.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/UnityManual.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/UnityManual.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/UnityManual.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/UnityManual.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/UnityManual.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="매뉴얼 검색..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/UnityManual.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/UnityManual.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/UnityManual.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/UnityManual.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/UnityManual.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/UnityManual.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/UnityManual.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/UnityManual.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/UnityManual.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/UnityManual.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/UnityManual.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/UnityManual.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/UnityManual.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/UnityManual.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/UnityManual.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/UnityManual.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/UnityManual.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/UnityManual.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/UnityManual.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/UnityManual.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">언어:
+        <span class="b">한국어</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/UnityManual.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/UnityManual.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/UnityManual.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/UnityManual.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/UnityManual.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/UnityManual.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>매뉴얼</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/UnityManual.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/UnityManual.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/UnityManual.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/UnityManual.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/UnityManual.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/UnityManual.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/UnityManual.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/UnityManual.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/UnityManual.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/UnityManual.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/UnityManual.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/UnityManual.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/UnityManual.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/UnityManual.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/UnityManual.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/UnityManual.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/UnityManual.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/UnityManual.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/UnityManual.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/UnityManual.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul><li>Unity User Manual 2021.3 (LTS)</li></ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityManual.html"></a></span><div class="tip">Unity User Manual 2021.3 (LTS)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityManual.html"></a></span><div class="tip">Unity User Manual 2021.3 (LTS)</div>
+</div>
+</div></div>
+<h1>Unity User Manual 2021.3 (LTS)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 에디터를 사용하여 2D 및 3D 게임, 앱 및 경험을 만들 수 있습니다. <a href="https://unity3d.com/unity">unity3d.com</a>에서 에디터를 다운로드합니다.</p>
+
+<p>Unity 사용자 매뉴얼은 Unity 에디터와 관련 서비스를 사용하는 방법을 배우는 데 유용합니다. 매뉴얼을 처음부터 끝까지 읽거나 참고 자료로 이용할 수 있습니다.</p>
+
+<p>Unity를 처음 사용하는 경우 <a href="UnityOverview.html">Unity로 작업하기</a>에 대한 입문자용 문서와 <a href="https://unity3d.com/learn/tutorials">Unity 튜토리얼</a>을 참조하십시오.</p>
+<div class="frontpage-topsection">
+
+<p><strong>새로운 기능</strong></p>
+
+<ul>
+<li>Features introduced in 2021.3: <a href="WhatsNew2021LTS.html">What’s New</a>
+</li>
+<li>Upgrading Unity projects from older versions of Unity: <a href="UpgradeGuide2021LTS.html">Upgrade Guide</a>
+</li>
+</ul>
+</div>
+<div class="frontpage-topsection">
+
+<p><strong>패키지</strong></p>
+
+<ul>
+<li>패키지에 대해 알아보기: <a href="Packages.html">패키지 관리자 사용</a>
+</li>
+<li>특정 패키지에 관한 문서 찾기: <a href="pack-safe.html">검증된 패키지</a>와 <a href="pack-preview.html">프리뷰 패키지</a>
+</li>
+<li>커스텀 패키지를 빌드하는 방법 알아보기: <a href="CustomPackages.html">커스텀 패키지 생성</a>
+</li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="frontpage-divider"></div>
+
+<h3>Unity 사용자 매뉴얼 섹션</h3>
+<div class="frontpage-section">
+<a href="UnityOverview.html"><img src="../uploads/Main/StructEditor.jpg" alt="Main.UnityOverview"></a>
+
+<h3><a href="UnityOverview.html">Unity에서 작업</a></h3>
+
+<p>Unity 에디터에 대한 전체 개요</p>
+</div>
+<div class="frontpage-section">
+<a href="Unity2D.html"><img src="../uploads/Main/struct2d.jpg" alt="Main.Unity2D"></a>
+
+<h3><a href="Unity2D.html">Unity 2D</a></h3>
+
+<p>Unity 에디터의 모든 2D 관련 기능(게임플레이, 스프라이트 및 물리 등)</p>
+</div>
+<div class="frontpage-section">
+<a href="Graphics.html"><img src="../uploads/Main/StructGraphics.jpg" alt="Main.Graphics"></a>
+
+<h3><a href="Graphics.html">그래픽스</a></h3>
+
+<p>Unity 에디터의 시각적 요소(카메라 및 조명 등)</p>
+</div>
+<div class="frontpage-section">
+<a href="PhysicsSection.html"><img src="../uploads/Main/StructPhysics.jpg" alt="Main.PhysicsSection"></a>
+
+<h3><a href="PhysicsSection.html">물리</a></h3>
+
+<p>3D 모션, 질량, 중력 및 충돌에 대한 시뮬레이션</p>
+</div>
+<div class="frontpage-section">
+<a href="UNet.html"><img src="../uploads/Main/StructUNet.png" alt="Main.UNet"></a>
+
+<h3><a href="UNet.html">네트워킹</a></h3>
+
+<p>멀티플레이어 및 네트워킹 구현 방법</p>
+</div>
+<div class="frontpage-section">
+<a href="ScriptingSection.html"><img src="../uploads/Main/StructScripting.jpg" alt="Main.ScriptingSection"></a>
+
+<h3><a href="ScriptingSection.html">스크립팅</a></h3>
+
+<p>Unity 에디터에서 스크립팅을 사용하여 게임을 프로그래밍하는 방법</p>
+</div>
+<div class="frontpage-section">
+<a href="Audio.html"><img src="../uploads/Main/StructAudio.jpg" alt="Main.Audio"></a>
+
+<h3><a href="Audio.html">오디오</a></h3>
+
+<p>Unity 에디터의 오디오(클립, 소스, 리스너, 임포트 및 사운드 설정 등)</p>
+</div>
+<div class="frontpage-section">
+<a href="AnimationSection.html"><img src="../uploads/Main/StructAnimation.jpg" alt="Main.AnimationSection"></a>
+
+<h3><a href="AnimationSection.html">애니메이션</a></h3>
+
+<p>Unity 에디터의 애니메이션</p>
+</div>
+<div class="frontpage-section">
+<a href="UIToolkits.html"><img src="../uploads/Main/StructUI.jpg" alt="Main.UISystem"></a>
+
+<h3><a href="UIToolkits.html">UI</a></h3>
+
+<p>Unity 에디터에서 이용 가능한 사용자 인터페이스 툴킷</p>
+</div>
+<div class="frontpage-section">
+<a href="Navigation.html"><img src="../uploads/Main/StructNavigation.jpg" alt="Main.Navigation"></a>
+
+<h3><a href="Navigation.html">내비게이션</a></h3>
+
+<p>Unity 에디터의 내비게이션(AI 및 경로 탐색 등)</p>
+</div>
+<div class="frontpage-section">
+<a href="UnityServices.html"><img src="../uploads/Main/ServicesSection.png" alt="Main.Services"></a>
+
+<h3><a href="UnityServices.html">Unity 서비스</a></h3>
+</div>
+<div class="frontpage-section">
+<a href="VROverview.html"><img src="../uploads/Main/StructVR.jpg" alt="Main.VROverview"></a>
+
+<h3><a href="VROverview.html">가상 현실</a></h3>
+</div>
+<div class="frontpage-section">
+<a href="ContributingToUnity.html"><img src="../uploads/Main/StructContributingToUnity.jpg" alt="Main.ContributingToUnity"></a>
+
+<h3><a href="ContributingToUnity.html">Unity에 기여하기</a></h3>
+
+<p>Unity 에디터의 일부 소스 코드에 대한 수정 사항 제안</p>
+</div>
+<div class="frontpage-section">
+<a href="PlatformSpecific.html"><img src="../uploads/Main/StructPlatformSpecific.jpg" alt="Main.PlatformSpecific"></a>
+
+<h3><a href="PlatformSpecific.html">플랫폼별 정보</a></h3>
+
+<p>애플리케이션을 빌드할 수 있는 플랫폼에 대한 정보</p>
+</div>
+<div class="frontpage-section">
+<a href="LegacyTopics.html"><img src="../uploads/Main/StructLegacyTopics.jpg" alt="Main.LegacyTopics"></a>
+
+<h3><a href="LegacyTopics.html">레거시 항목</a></h3>
+레거시 프로젝트 유지 관리에 유용한 내용
+</div>
+<div class="clear"></div>
+
+<p><br></p>
+
+<h3>추가 정보 출처</h3>
+
+<ul>
+<li><p><a href="https://answers.unity3d.com/">Unity Answers</a> 또는 <a href="https://forum.unity3d.com/">Unity Forums</a> - 여기서 질문하고 답변을 검색할 수 있습니다.</p></li>
+<li><p><a href="https://support.unity3d.com">Unity Knowledge Base</a> - Unity의 지원 팀에 접수된 질문에 대한 답변 모음</p></li>
+<li><p><a href="https://unity3d.com/learn/tutorials">튜토리얼</a> - Unity 에디터 사용법을 설명하는 단계별 동영상 및 가이드</p></li>
+<li><p><a href="https://unityads.unity3d.com/help/index">Unity Ads Knowledge Base</a> - 게임에 광고를 포함시키는 방법에 대한 가이드</p></li>
+<li><p><a href="https://unity3d.com/asset-store/help">에셋 스토어 도움말</a> - 에셋 스토어 콘텐츠 공유에 대한 도움말</p></li>
+</ul>
+
+<h3>알려진 문제</h3>
+
+<p>올바르게 작동하지 않는 기능이 있습니까? 이미 알려진 문제일 수 있습니다. <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>에서 __Issue Tracker__를 사용하여 확인해야 합니다.</p>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityManual.html"></a></span><div class="tip">Unity User Manual 2021.3 (LTS)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityManual.html"></a></span><div class="tip">Unity User Manual 2021.3 (LTS)</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

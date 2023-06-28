@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="no-js" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="에셋 임포트 - Unity 매뉴얼">
+<title>에셋 임포트 - Unity 매뉴얼</title>
+<meta property="og:image" content="https://docs.unity.cn/kr/2021.3/uploads/Main/ProjectBrowser.png">
+<meta name="description" content="프로젝트의 Assets 폴더로 파일을 직접 익스포트하거나 해당 폴더로 복사하면 Unity로 생성하지 않은 에셋을 Unity 프로젝트로 가져올 수 있습니다. 여러 일반적인 포맷의 소스 파일을 프로젝트의 Assets 폴더에 직접 저장할 수 있고 Unity에서 해당 파일을 읽을 수 있습니다. 또한 파일에 새로운 변경 사항을 저장하면 Unity가 인식하여 필요한 경우 파일을 다시 임포트합니다.`">
+<meta property="og:description" content="프로젝트의 Assets 폴더로 파일을 직접 익스포트하거나 해당 폴더로 복사하면 Unity로 생성하지 않은 에셋을 Unity 프로젝트로 가져올 수 있습니다. 여러 일반적인 포맷의 소스 파일을 프로젝트의 Assets 폴더에 직접 저장할 수 있고 Unity에서 해당 파일을 읽을 수 있습니다. 또한 파일에 새로운 변경 사항을 저장하면 Unity가 인식하여 필요한 경우 파일을 다시 임포트합니다.`">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'kr';
+      var page = 'ImportingAssets';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/kr/2021.3/Manual/ImportingAssets.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/ImportingAssets.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/ImportingAssets.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/ImportingAssets.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/ImportingAssets.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/ImportingAssets.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/ImportingAssets.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/ImportingAssets.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="매뉴얼 검색..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/ImportingAssets.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/ImportingAssets.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/ImportingAssets.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/ImportingAssets.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/ImportingAssets.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/ImportingAssets.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/ImportingAssets.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/ImportingAssets.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/ImportingAssets.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/ImportingAssets.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/ImportingAssets.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">언어:
+        <span class="b">한국어</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/ImportingAssets.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/ImportingAssets.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/ImportingAssets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/ImportingAssets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/ImportingAssets.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/ImportingAssets.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>매뉴얼</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/ImportingAssets.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/ImportingAssets.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/ImportingAssets.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/ImportingAssets.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/ImportingAssets.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/ImportingAssets.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/ImportingAssets.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/ImportingAssets.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/ImportingAssets.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/ImportingAssets.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/ImportingAssets.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.3 (LTS)</a></li>
+<li><a href="AssetWorkflow.html">에셋 워크플로</a></li>
+<li>에셋 임포트</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetWorkflow.html"></a></span><div class="tip">에셋 워크플로</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ParallelImport.html"></a></span><div class="tip">에셋 동시 임포트</div>
+</div>
+</div></div>
+<h1>에셋 임포트</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>프로젝트의 <code>Assets</code> 폴더로 파일을 직접 익스포트하거나 해당 폴더로 복사하면 Unity로 생성하지 않은 에셋을 Unity 프로젝트로 가져올 수 있습니다. 여러 일반적인 포맷의 소스 파일을 프로젝트의 <code>Assets</code> 폴더에 직접 저장할 수 있고 Unity에서 해당 파일을 읽을 수 있습니다. 또한 파일에 새로운 변경 사항을 저장하면 Unity가 인식하여 필요한 경우 파일을 다시 임포트합니다.`</p>
+
+<p>Unity 프로젝트를 만들면 프로젝트 이름을 딴 폴더가 생성되고, 이 폴더에는 다음과 같은 하위 폴더가 포함됩니다.</p>
+
+<ul>
+<li><code>Temp</code></li>
+<li><code>Library</code></li>
+<li><code>Assets</code></li>
+<li><code>ProjectSettings</code></li>
+<li><code>Logs</code></li>
+<li><code>Packages</code></li>
+</ul>
+
+<p>프로젝트에 사용할 파일을 <code>Assets</code> 폴더에 저장하거나 복사합니다. Unity의 프로젝트 창을 사용하여 <code>Assets</code> 폴더의 내용을 확인할 수 있습니다. 그러므로 파일을 <code>Assets</code> 폴더에 저장하거나 복사하면 Unity가 파일을 임포트하여 프로젝트 창에 표시합니다.</p>
+
+<p>Unity에서 파일을 수정하면 Unity 내에서 에셋을 압축, 수정 또는 처리하는 다양한 방법 중에서 선택할 수 있지만 Unity는 원본 소스 파일을 수정하지 않습니다. 대신 임포트 프로세스에서는 소스 파일을 읽고, 선택된 임포트 설정과 일치하고 게임에 사용할 준비가 된 에셋을 내부적으로 생성합니다. 에셋의 임포트 설정을 수정하거나 <code>Assets</code> 폴더에 있는 소스 파일을 변경하면 Unity가 에셋을 다시 임포트하여 변경 사항을 반영합니다.</p>
+
+<p><strong>경고:</strong> 대부분의 경우 프로젝트 창에 나타나는 항목은 컴퓨터의 실제 파일을 나타냅니다. Unity 에디터 프로젝트 창에서 삭제하면 컴퓨터에서도 삭제됩니다.</p>
+
+<p>Unity는 <code>Assets</code> 폴더에 파일이 추가되거나 <code>Assets</code> 폴더의 파일이 수정되면 이를 자동으로 인식합니다. <code>Assets</code> 폴더에 에셋을 넣으면 프로젝트 창에 표시됩니다.</p>
+
+<figure>
+<img src="../uploads/Main/ProjectBrowser.png" alt="프로젝트 창에 Unity가 프로젝트로 임포트한 에셋이 표시됩니다.">
+<figcaption>프로젝트 창에 Unity가 프로젝트로 임포트한 에셋이 표시됩니다.</figcaption>
+</figure>
+
+<p>컴퓨터의 파일 브라우저에서 Unity의 프로젝트 창으로 파일을 드래그하면 Unity가 사본을 만들어 <code>Assets</code> 폴더에 넣습니다. 그런 다음 프로젝트 창에서 이 사본에 액세스할 수 있습니다.</p>
+
+<p>다른 Unity 프로젝트에서 현재 프로젝트로 에셋 컬렉션을 가져오려면 <a href="AssetPackages.html">에셋 패키지</a>를 사용할 수 있습니다.</p>
+
+<p><a name="importSettings"></a></p>
+
+<h2>에셋 임포트 설정</h2>
+
+<p>항상 Unity 프로젝트 폴더에서 에셋을 옮기거나 이름을 변경하는 방법이 가장 간단하고 안전합니다. 이 방법으로 해당 meta 파일을 자동으로 옮기거나 이름을 변경합니다. .meta 파일과 임포트 프로세스에 대한 자세한 내용은 <a href="AssetWorkflow.html#howUnityImportsAssets">Unity가 에셋을 임포트하는 방법</a>을 참조하십시오.</p>
+
+<p>Unity가 지원하는 각 에셋 타입에는 에셋 표시 및 동작 방법에 영향을 미치는 여러 임포트 설정이 있습니다. 에셋의 임포트 설정을 확인하려면 프로젝트 뷰에서 에셋을 선택합니다. 해당 에셋의 임포트 설정이 인스펙터에 표시됩니다. 표시되는 옵션은 선택한 에셋 타입에 따라 다릅니다.</p>
+
+<p>예를 들어 이미지의 임포트 설정에서는 Unity가 이미지를 텍스처, 2D 스프라이트 또는 노멀 맵 중 무엇으로 임포트하는지 선택할 수 있습니다. FBX 파일의 임포트 설정에서는 스케일을 조정하고, 노멀 또는 라이트맵 좌표를 생성하고, 파일에 정의된 애니메이션 클립을 분할하고 자를 수 있습니다.</p>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowImportSettings.png" alt="프로젝트 창에서 이미지 에셋을 클릭하면 해당 에셋의 임포트 설정이 인스펙터에 표시됩니다.">
+<figcaption>프로젝트 창에서 이미지 에셋을 클릭하면 해당 에셋의 임포트 설정이 인스펙터에 표시됩니다.</figcaption>
+</figure>
+
+<p>다른 에셋 타입의 임포트 설정은 다르게 표시됩니다. 표시되는 다양한 설정은 선택된 에셋 타입과 관련이 있습니다. 다음은 오디오 에셋과 인스펙터에 표시된 관련 임포트 설정의 예입니다.</p>
+
+<figure>
+<img src="../uploads/Main/ImportSettingsAudioExample.png" alt="프로젝트 창에서 오디오 에셋을 선택하면 에셋의 오디오 임포트 설정이 인스펙터에 표시됩니다.">
+<figcaption>프로젝트 창에서 오디오 에셋을 선택하면 에셋의 오디오 임포트 설정이 인스펙터에 표시됩니다.</figcaption>
+</figure>
+
+<p>크로스 플랫폼 프로젝트를 개발 중인 경우 “디폴트” 설정을 치환하여 플랫폼마다 다른 임포트 설정을 할당할 수 있습니다.</p>
+
+<p><a name="processing"></a></p>
+
+<h2>에셋 처리</h2>
+
+<p>Unity는 <code>Assets</code> 폴더에 추가한 모든 파일을 읽고 처리하고 파일 콘텐츠를 게임 레디 내부 데이터로 변환합니다. 에셋 파일 자체는 변경되지 않은 상태로 유지되고 내부 데이터는 프로젝트의 <code>Library</code> 폴더에 저장됩니다. 이 데이터는 Unity 에디터의 <a href="AssetDatabase.html">에셋 데이터베이스</a>의 일부입니다.</p>
+
+<p>에셋의 내부 포맷을 사용하면 Unity가 에셋의 내부 버전을 에디터에서 런타임 시 사용할 수 있게 준비하고 수정되지 않은 소스 파일을 <code>Assets</code> 폴더에 보관할 수 있습니다. 에셋 파일과 내부 버전을 구분하면 에셋 파일을 빠르게 편집할 수 있고 에디터가 변경 사항을 자동으로 인식할 수 있습니다. 예를 들어 <code>.psd</code> 파일을 <code>Assets</code> 폴더에 직접 저장할 수 있지만 모바일 디바이스나 PC 그래픽 카드 같은 하드웨어는 해당 포맷을 직접 텍스처로 렌더링할 수 없습니다. 대신 Unity는 내부 버전을 해당 플랫폼이 처리할 수 있는 포맷으로 전환할 수 있습니다.</p>
+
+<p>Unity는 캐시 폴더처럼 동작하는 <code>Library</code> 폴더에 에셋의 내부 표현을 저장합니다. 사용자는 <code>Library</code> 폴더를 수동으로 변경할 필요가 없습니다. 그렇게 하면 Unity 에디터에서 프로젝트에 부정적인 영향을 미칠 수 있습니다. 이것은 또한 버전 관리에 <code>Library</code> 폴더를 포함하지 않아야 함을 의미합니다.</p>
+
+<p><strong>참고:</strong> 프로젝트가 열려 있지 않은 경우 <code>Library</code> 폴더를 Unity에서 안전하게 삭제할 수 있습니다. Unity는 다음에 프로젝트를 실행할 때 <code>Assets</code> 및 <code>ProjectSettings</code> 폴더에서 모든 데이터를 재생성할 수 있기 때문입니다.</p>
+
+<h2>복잡한 에셋</h2>
+
+<p>경우에 따라 Unity는 단일 에셋 파일을 가져오는 동안 여러 에셋을 생성할 수 있습니다. 예를 들면 다음과 같습니다.</p>
+
+<ul>
+<li>3D 파일(예: FBX 파일)이 머티리얼을 정의하거나 임베디드 텍스처를 포함하는 경우. 이를 처리하기 위해 Unity는 <a href="FBXImporter-Materials.html">머티리얼과 임베디드 텍스처</a>를 별도의 에셋으로 추출합니다.</li>
+<li>이미지 파일을 여러 개의 2D 스프라이트로 임포트하는 경우. 2D <a href="SpriteEditor.html">스프라이트 에디터</a>를 사용하여 단일 그래픽 이미지에서 여러 스프라이트를 정의할 수 있습니다. Unity는 에디터에 정의된 각 스프라이트를 프로젝트 창에 개별 스프라이트 에셋으로 표시합니다.</li>
+<li>3D 파일에 여러 애니메이션 타임라인 또는 여러 클립이 포함된 경우. 이를 처리하기 위해 Unity는 <a href="Splittinganimations.html">애니메이션 임포트 설정</a>을 기반으로 별도의 애니메이션 타임라인이나 클립을 자동으로 정의합니다. 결과로 생성된 여러 애니메이션 클립은 프로젝트 창에서 개별 애니메이션 클립 에셋으로 나타납니다.</li>
+</ul>
+
+<h2>참고 항목</h2>
+
+<ul>
+<li><a href="AssetPackages.html">에셋 패키지</a></li>
+<li><a href="Materials.html">머티리얼 및 셰이더</a></li>
+<li><a href="Textures.html">텍스처 및 비디오</a></li>
+<li><a href="SpriteEditor.html">스프라이트 에디터</a></li>
+<li><a href="SpritePacker.html">스프라이트 패커</a></li>
+<li><a href="AudioFiles.html">오디오 파일</a></li>
+<li><a href="TrackerModules.html">트래커 모듈</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetWorkflow.html"></a></span><div class="tip">에셋 워크플로</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ParallelImport.html"></a></span><div class="tip">에셋 동시 임포트</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Animation FAQ - Unity Manual">
+<title>Animation FAQ - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity.cn/cn/2018.3/uploads/Main/AnimationFAQAnimationVsAnimatorComponent.png">
+<meta name="description" content="What&amp;#8217;s &amp;#8220;Mecanim&amp;#8221;?">
+<meta property="og:description" content="What&amp;#8217;s &amp;#8220;Mecanim&amp;#8221;?">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'MecanimFAQ';
+      if(!page) page = 'index';
+      var version = '2018.3';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/cn/2018.3/Manual/MecanimFAQ.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2018.3/Manual/MecanimFAQ.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2018.3/Manual/MecanimFAQ.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2018.3/Manual/MecanimFAQ.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2018.3/Manual/MecanimFAQ.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2018.3/Manual/MecanimFAQ.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2018.3/Manual/MecanimFAQ.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2018.3/Documentation/Manual/MecanimFAQ.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/MecanimFAQ.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/MecanimFAQ.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/MecanimFAQ.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MecanimFAQ.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/MecanimFAQ.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MecanimFAQ.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MecanimFAQ.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MecanimFAQ.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MecanimFAQ.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MecanimFAQ.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MecanimFAQ.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MecanimFAQ.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MecanimFAQ.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MecanimFAQ.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MecanimFAQ.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MecanimFAQ.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/MecanimFAQ.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.3/Documentation/Manual/MecanimFAQ.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.3/Manual/MecanimFAQ.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.3/Manual/MecanimFAQ.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.3/Manual/MecanimFAQ.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.3/Manual/MecanimFAQ.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.3/Manual/MecanimFAQ.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/MecanimFAQ.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/MecanimFAQ.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/MecanimFAQ.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MecanimFAQ.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/MecanimFAQ.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MecanimFAQ.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MecanimFAQ.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MecanimFAQ.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MecanimFAQ.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MecanimFAQ.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MecanimFAQ.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MecanimFAQ.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MecanimFAQ.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MecanimFAQ.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MecanimFAQ.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MecanimFAQ.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/MecanimFAQ.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
+<li><a href="AnimationSection.html">Animation</a></li>
+<li>Animation FAQ</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Transition.html"></a></span><div class="tip">Animation transitions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Playables.html"></a></span><div class="tip">Playables API</div>
+</div>
+</div></div>
+<h1>Animation FAQ</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>General questions</h2>
+
+<p><strong>What’s “Mecanim”?</strong></p>
+
+<p>Mecanim was the name of the animation software that we integrated into Unity. Early in the 4.x series of Unity, its abilities were tied specifically to humanoid character animation and it had many features which were uniquely suited for that purpose, and it was separate to our old (now legacy) integrated animation system.</p>
+
+<p>Mecanim integrated humanoid animation retargeting, muscle control, and the state machine system. The name “Mecanim” comes from the French word “Mec” meaning “Guy”. Since Mecanim operated only with humanoid characters, our legacy animation system was still required for animating non-humanoid characters and other keyframe-based animation of gameobjects within Unity.</p>
+
+<p>Since then however, we’ve developed and expanded Mecanim and integrated it with the rest of our animation system so that it can be used for all aspects of animation within your project - so there is a less clear definition where “Mecanim” ends and the rest of the animation system begins. For this reason, you’ll still see references in our documentation and throughout our community to “Mecanim” which has now simply come to mean our main animation system.</p>
+
+<p><strong>What’s the difference between the Animation component and the Animator component?</strong></p>
+
+<p>The Animation component is an old component used for animation in our legacy animation system. It remains in Unity for backwards compatibility but you should not use it for new projects. Use the up-to-date Animator component instead.</p>
+
+<figure>
+<img src="../uploads/Main/AnimationFAQAnimationVsAnimatorComponent.png" alt="LEFT: Old Legacy Animation component. RIGHT: Modern Animator Component">
+<figcaption>LEFT: Old Legacy “Animation” component. RIGHT: Modern “Animator” Component</figcaption>
+</figure>
+
+<p><strong>What’s the difference between the Animation window and the Animator window?</strong></p>
+
+<p>The <strong>Animation Window</strong> allows you to create and edit animation clips within Unity. You can use it to animate almost every property that you can edit in the inspector, from a Game Object’s position, a material colour, a light’s brightness, a sound’s volume, and even arbitrary values in your own scripts.</p>
+
+<p>The <strong>Animator Window</strong> allows you to organise your existing animation clip assets into a flowchart-like system called a state machine.</p>
+
+<p>Both of these windows are part of our current animation system, and not the legacy system.</p>
+
+<p><strong>So the Animation Component is legacy, but the Animation Window is current?</strong></p>
+
+<p>That’s correct.</p>
+
+<p><strong>We are using the legacy animation system for character animations. Should we be using the current animation system (Mecanim) instead?</strong></p>
+
+<p>Generally, yes you should. Our legacy animation system is only included for backward compatibility with old projects, and it has a very limited feature set compared with our current animation system. The only reason you should use it is for legacy projects built using the old system.</p>
+
+<h2>Import</h2>
+
+<p><strong>Why does my imported mesh have an animator component attached to it?</strong></p>
+
+<p>When Unity detectes that an imported file has animation in its timeline, it will add an animation component on import. You can modify this in the asset’s import settings by setting the “Animation Type” to <em>None</em> in the import settings under the Rig tab. If necessary you can do this with several files at once.</p>
+
+<h2>Layers</h2>
+
+<p><strong>Does the ordering of the layers matter?</strong></p>
+
+<p>Yes. Layers are evaluated from top to bottom in order. Layers set to <em>override</em> will always override the previous layers (based on their mask, if they have a mask).</p>
+
+<p><strong>Should the weight value of the base layer always be set to one or should the weight be zero when using another layer?</strong></p>
+
+<p>The base layer weight is always 1 and override layers will completely override the base layer.</p>
+
+<p><strong>Is there any way to get a variable value from the controller without using the name string?</strong></p>
+
+<p>You can use integers to identify the states and parameters. Use the <a href="../ScriptReference/Animator.StringToHash.html">Animator.StringToHash</a> function to get the integer identifier values. For example:</p>
+
+<pre><code>runState = Animator.StringToHash("Base Layer.Run");
+animator.SetBool(runState, false);
+
+</code></pre>
+
+<p><strong>What happens if a state on a Sync layer has a different length compared to the corresponding state in the base layer?</strong></p>
+
+<p>If layers have different lengths then they will become unsynchronized. Enable the Timing option to force the timing of the states on the current layer, on the source layer.</p>
+
+<h2>Avatar Masks</h2>
+
+<p><strong>Is there a way to create AvatarIKGoals other than LeftFoot, RightFoot, LeftHand, RightHand?</strong></p>
+
+<p>Yes, knee and elbow IK is supported.</p>
+
+<p><strong>Is there a way to define what transforms are part of the Avatar Mask?</strong></p>
+
+<p>Yes, for Generic clips you can define which transform animation is imported or not. For Humanoid clips, all human transforms are always imported and extra transforms can de defined.</p>
+
+<h2>Animations curves</h2>
+
+<p><strong>How do animations that have Curves blend with those that don’t?</strong></p>
+
+<p>When you have an animation with a curve and another animation without a curve, Unity will use the default value of the parameter connected to the curve to do blending.
+You can set default values for your parameters, so when blending takes place between a State that has a <em>Curve</em> Parameter and one that does not have one, it will blend between the curve value and the default parameter value.
+To set a default value for a Parameter, simply set its value in the Animator Tool window while not in LiveLink.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Transition.html"></a></span><div class="tip">Animation transitions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Playables.html"></a></span><div class="tip">Playables API</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Audio Source - Unity Manual">
+<title>Audio Source - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity.cn/cn/2018.3/uploads/Main/AudioSourceInspector.png">
+<meta name="description" content="The Audio Source plays back an Audio Clip in the scene. The clip can be played to an audio listener or through an audio mixer. The audio source can play any type of Audio Clip and can be configured to play these as 2D, 3D, or as a mixture (SpatialBlend). The audio can be spread out between speakers (stereo to 7.1) (Spread) and morphed between 3D and 2D (SpatialBlend). This can be controlled over distance with falloff curves. Also, if the listener is within one or multiple Reverb Zones, reverberation is applied to the source. Individual filters can be applied to each audio source for an even richer audio experience. See Audio Effects for more details.">
+<meta property="og:description" content="The Audio Source plays back an Audio Clip in the scene. The clip can be played to an audio listener or through an audio mixer. The audio source can play any type of Audio Clip and can be configured to play these as 2D, 3D, or as a mixture (SpatialBlend). The audio can be spread out between speakers (stereo to 7.1) (Spread) and morphed between 3D and 2D (SpatialBlend). This can be controlled over distance with falloff curves. Also, if the listener is within one or multiple Reverb Zones, reverberation is applied to the source. Individual filters can be applied to each audio source for an even richer audio experience. See Audio Effects for more details.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-AudioSource';
+      if(!page) page = 'index';
+      var version = '2018.3';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/cn/2018.3/Manual/class-AudioSource.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2018.3/Manual/class-AudioSource.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2018.3/Manual/class-AudioSource.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2018.3/Manual/class-AudioSource.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2018.3/Manual/class-AudioSource.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2018.3/Manual/class-AudioSource.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2018.3/Manual/class-AudioSource.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2018.3/Documentation/Manual/class-AudioSource.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-AudioSource.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-AudioSource.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-AudioSource.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-AudioSource.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-AudioSource.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-AudioSource.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-AudioSource.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-AudioSource.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-AudioSource.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-AudioSource.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-AudioSource.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-AudioSource.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-AudioSource.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-AudioSource.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-AudioSource.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-AudioSource.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-AudioSource.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.3/Documentation/Manual/class-AudioSource.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.3/Manual/class-AudioSource.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.3/Manual/class-AudioSource.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.3/Manual/class-AudioSource.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.3/Manual/class-AudioSource.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.3/Manual/class-AudioSource.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-AudioSource.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-AudioSource.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-AudioSource.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-AudioSource.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-AudioSource.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-AudioSource.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-AudioSource.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-AudioSource.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-AudioSource.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-AudioSource.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-AudioSource.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-AudioSource.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-AudioSource.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-AudioSource.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-AudioSource.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-AudioSource.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-AudioSource.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
+<li><a href="Audio.html">Audio</a></li>
+<li>Audio Reference</li>
+<li>Audio Source</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioListener.html"></a></span><div class="tip">Audio Listener</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioMixer.html"></a></span><div class="tip">Audio Mixer</div>
+</div>
+</div></div>
+<h1>Audio Source</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Audio Source</strong> plays back an <a href="class-AudioClip.html">Audio Clip</a> in the scene. The clip can be played to an <a href="class-AudioListener.html">audio listener</a> or through an <a href="class-AudioMixer.html">audio mixer</a>. The audio source can play any type of <a href="class-AudioClip.html">Audio Clip</a> and can be configured to play these as 2D, 3D, or as a mixture (<em>SpatialBlend</em>). The audio can be spread out between speakers (stereo to 7.1) (<em>Spread</em>) and morphed between 3D and 2D (<em>SpatialBlend</em>). This can be controlled over distance with falloff curves. Also, if the <a href="class-AudioListener.html">listener</a> is within one or multiple <a href="class-AudioReverbZone.html">Reverb Zones</a>, reverberation is applied to the source. Individual filters can be applied to each audio source for an even richer audio experience. See <a href="class-AudioEffect.html">Audio Effects</a> for more details.</p>
+
+<figure>
+<img src="../uploads/Main/AudioSourceInspector.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Audio Clip</strong></td>
+	<td style="text-align:left;">Reference to the sound clip file that will be played.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Output</strong></td>
+	<td style="text-align:left;">The sound can be output through an <a href="class-AudioListener.html">audio listener</a> or an <a href="class-AudioMixer.html">audio mixer</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mute</strong></td>
+	<td style="text-align:left;">If enabled the sound will be playing but muted.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Effects</strong></td>
+	<td style="text-align:left;">This is to quickly “by-pass” filter effects applied to the audio source. An easy way to turn all effects on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Listener Effects</strong></td>
+	<td style="text-align:left;">This is to quickly turn all Listener effects on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Reverb Zones</strong></td>
+	<td style="text-align:left;">This is to quickly turn all Reverb Zones on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Play On Awake</strong></td>
+	<td style="text-align:left;">If enabled, the sound will start playing the moment the scene launches. If disabled, you need to start it using the <strong>Play()</strong> command from scripting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Loop</strong></td>
+	<td style="text-align:left;">Enable this to make the <strong>Audio Clip</strong> loop when it reaches the end.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Priority</strong></td>
+	<td style="text-align:left;">Determines the priority of this audio source among all the ones that coexist in the scene. (Priority: 0 = most important. 256 = least important. Default = 128.). Use 0 for music tracks to avoid it getting occasionally swapped out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Volume</strong></td>
+	<td style="text-align:left;">How loud the sound is at a distance of one world unit (one meter) from the <strong>Audio Listener</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pitch</strong></td>
+	<td style="text-align:left;">Amount of change in pitch due to slowdown/speed up of the <strong>Audio Clip</strong>. Value 1 is normal playback speed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stereo Pan</strong></td>
+	<td style="text-align:left;">Sets the position in the stereo field of 2D sounds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spatial Blend</strong></td>
+	<td style="text-align:left;">Sets how much the 3D engine has an effect on the audio source.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reverb Zone Mix</strong></td>
+	<td style="text-align:left;">Sets the amount of the output signal that gets routed to the reverb zones. The amount is linear in the (0 - 1) range, but allows for a 10 dB amplification in the (1 - 1.1) range which can be useful to achieve the effect of near-field and distant sounds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><strong>3D Sound Settings</strong></strong></td>
+	<td style="text-align:left;">Settings that are applied proportionally to the Spatial Blend parameter.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Doppler Level</strong></td>
+	<td style="text-align:left;">Determines how much doppler effect will be applied to this audio source (if is set to 0, then no effect is applied).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spread</strong></td>
+	<td style="text-align:left;">Sets the spread angle to 3D stereo or multichannel sound in speaker space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Distance</strong></td>
+	<td style="text-align:left;">Within the MinDistance, the sound will stay at loudest possible. Outside MinDistance it will begin to attenuate. Increase the MinDistance of a sound to make it ‘louder’ in a 3d world, and decrease it to make it ‘quieter’ in a 3d world.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;">The distance where the sound stops attenuating at. Beyond this point it will stay at the volume it would be at MaxDistance units from the listener and will not attenuate any more.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rolloff Mode</strong></td>
+	<td style="text-align:left;">How fast the sound fades. The higher the value, the closer the Listener has to be before hearing the sound. (This is determined by a Graph).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Logarithmic Rolloff</strong></td>
+	<td style="text-align:left;">The sound is loud when you are close to the audio source, but when you get away from the object it decreases significantly fast.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Linear Rolloff</strong></td>
+	<td style="text-align:left;">The further away from the audio source you go, the less you can hear it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Custom Rolloff</strong></td>
+	<td style="text-align:left;">The sound from the audio source behaves accordingly to how you set the graph of roll offs.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Types of Rolloff</h2>
+
+<p>There are three Rolloff modes: Logarithmic, Linear and Custom Rolloff. The Custom Rolloff can be modified by modifying the volume distance curve as described below. If you try to modify the volume distance function when it is set to Logarithmic or Linear, the type will automatically change to Custom Rolloff.</p>
+
+<figure>
+<img src="../uploads/Main/TypesOfRollOff.png" alt="Rolloff Modes that an audio source can have.">
+<figcaption>Rolloff Modes that an audio source can have.</figcaption>
+</figure>
+
+<h2>Distance Functions</h2>
+
+<p>There are several properties of the audio that can be modified as a function of the distance between the audio source and the audio listener.</p>
+
+<p><strong>Volume</strong>: Amplitude(0.0 - 1.0) over distance. </p>
+
+<p><strong>Spatial Blend</strong>: 2D (original channel mapping) to 3D (all channels downmixed to mono and attenuated according to distance and direction). </p>
+
+<p><strong>Spread</strong>: Angle (degrees 0.0 - 360.0) over distance. </p>
+
+<p><strong>Low-Pass</strong> (only if LowPassFilter is attached to the AudioSource): Cutoff Frequency (22000.0–10.0) over distance.</p>
+
+<p><strong>Reverb Zone</strong>: Amount of signal routed to the reverb zones. Note that the volume property and distance and directional attenuation are applied to the signal first and therefore affect both the direct and reverberated signals.</p>
+
+<figure>
+<img src="../uploads/Main/AudioDistanceFunctions.png" alt="Distance functions for Volume, Spatial Blend, Spread, Low-Pass audio filter, and Reverb Zone Mix. The current distance to the Audio Listener is marked in the graph by the red vertical line.">
+<figcaption>Distance functions for Volume, Spatial Blend, Spread, Low-Pass audio filter, and Reverb Zone Mix. The current distance to the Audio Listener is marked in the graph by the red vertical line.</figcaption>
+</figure>
+
+<p>To modify the distance functions, you can edit the curves directly. For more information, see the guide to <a href="EditingCurves.html">Editing Curves</a>.</p>
+
+<h2>Creating Audio Sources</h2>
+
+<p>Audio Sources don’t do anything without an assigned <strong>Audio Clip</strong>. The Clip is the actual sound file that will be played back. The Source is like a controller for starting and stopping playback of that clip, and modifying other audio properties.</p>
+
+<p>To create a new Audio Source:</p>
+
+<ol>
+<li>Import your audio files into your Unity Project. These are now Audio Clips.</li>
+<li>Go to <strong>GameObject-&gt;Create Empty</strong> from the menubar.</li>
+<li>With the new GameObject selected, select <strong>Component-&gt;Audio-&gt;Audio Source</strong>.</li>
+<li>Assign the <strong>Audio Clip</strong> property of the Audio Source Component in the Inspector.</li>
+</ol>
+
+<p><strong>Note:</strong> If you want to create an <strong>Audio Source</strong> just for one <strong>Audio Clip</strong> that you have in the Assets folder then you can just drag that clip to the scene view - a GameObject with an <strong>Audio Source</strong> component will be created automatically for it. Dragging a clip onto on existing GameObject will attach the clip along with a new <strong>Audio Source</strong> if there isn’t one already there. If the object does already have an <strong>Audio Source</strong> then the newly dragged clip will replace the one that the source currently uses.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioListener.html"></a></span><div class="tip">Audio Listener</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioMixer.html"></a></span><div class="tip">Audio Mixer</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

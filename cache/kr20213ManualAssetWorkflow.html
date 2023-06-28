@@ -1,0 +1,329 @@
+<!DOCTYPE html><html class="no-js" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="에셋 워크플로 - Unity 매뉴얼">
+<title>에셋 워크플로 - Unity 매뉴얼</title>
+<meta property="og:image" content="https://docs.unity.cn/kr/2021.3/uploads/Main/AssetWorkflowOverview.svg">
+<meta name="description" content="에셋은 Unity 프로젝트에서 게임이나 앱을 만드는 데 사용하는 모든 아이템입니다. 에셋은 프로젝트에서 3D 모델, 텍스처, 스프라이트, 음향 효과 또는 음악과 같은 시각적 또는 청각적 요소를 나타낼 수 있습니다. 또한 에셋은 컬러 그레디언트, 애니메이션 마스크, 임의 텍스트나 숫자 데이터와 같은 더욱 추상적인 아이템을 나타낼 수도 있습니다.">
+<meta property="og:description" content="에셋은 Unity 프로젝트에서 게임이나 앱을 만드는 데 사용하는 모든 아이템입니다. 에셋은 프로젝트에서 3D 모델, 텍스처, 스프라이트, 음향 효과 또는 음악과 같은 시각적 또는 청각적 요소를 나타낼 수 있습니다. 또한 에셋은 컬러 그레디언트, 애니메이션 마스크, 임의 텍스트나 숫자 데이터와 같은 더욱 추상적인 아이템을 나타낼 수도 있습니다.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'kr';
+      var page = 'AssetWorkflow';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/kr/2021.3/Manual/AssetWorkflow.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/AssetWorkflow.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/AssetWorkflow.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/AssetWorkflow.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/AssetWorkflow.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/AssetWorkflow.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/AssetWorkflow.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/AssetWorkflow.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="매뉴얼 검색..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/AssetWorkflow.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/AssetWorkflow.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/AssetWorkflow.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/AssetWorkflow.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/AssetWorkflow.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/AssetWorkflow.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/AssetWorkflow.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/AssetWorkflow.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/AssetWorkflow.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/AssetWorkflow.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/AssetWorkflow.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/AssetWorkflow.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/AssetWorkflow.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/AssetWorkflow.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/AssetWorkflow.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/AssetWorkflow.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/AssetWorkflow.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/AssetWorkflow.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/AssetWorkflow.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/AssetWorkflow.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">언어:
+        <span class="b">한국어</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/AssetWorkflow.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/AssetWorkflow.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/AssetWorkflow.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/AssetWorkflow.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/AssetWorkflow.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/AssetWorkflow.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>매뉴얼</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/AssetWorkflow.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/AssetWorkflow.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/AssetWorkflow.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/AssetWorkflow.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/AssetWorkflow.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/AssetWorkflow.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/AssetWorkflow.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/AssetWorkflow.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/AssetWorkflow.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/AssetWorkflow.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/AssetWorkflow.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/AssetWorkflow.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/AssetWorkflow.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/AssetWorkflow.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/AssetWorkflow.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/AssetWorkflow.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/AssetWorkflow.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/AssetWorkflow.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/AssetWorkflow.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/AssetWorkflow.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.3 (LTS)</a></li>
+<li>에셋 워크플로</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AsyncReadManagerMetrics.html"></a></span><div class="tip">에셋 로드 지표</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportingAssets.html"></a></span><div class="tip">에셋 임포트</div>
+</div>
+</div></div>
+<h1>에셋 워크플로</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>에셋은 Unity 프로젝트에서 게임이나 앱을 만드는 데 사용하는 모든 아이템입니다. 에셋은 프로젝트에서 3D 모델, 텍스처, 스프라이트, 음향 효과 또는 음악과 같은 시각적 또는 청각적 요소를 나타낼 수 있습니다. 또한 에셋은 컬러 그레디언트, 애니메이션 마스크, 임의 텍스트나 숫자 데이터와 같은 더욱 추상적인 아이템을 나타낼 수도 있습니다.</p>
+
+<p>에셋은 3D 모델, 오디오 파일, 이미지와 같은 Unity 외부에서 생성된 파일을 가져올 수 있습니다. 또한 ProBuilder 메시, Animator 컨트롤러, 오디오 믹서, 렌더 텍스처와 같은 Unity 에디터에서 일부 타입의 에셋을 생성할 수도 있습니다.</p>
+
+<h2>임포트, 생성, 빌드, 배포, 로드</h2>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowOverview.svg" alt="Unity의 에셋 워크플로">
+<figcaption>Unity의 에셋 워크플로</figcaption>
+</figure>
+
+<p>위의 다이어그램은 Unity에서 에셋으로 작업할 때의 일반적인 워크플로를 보여줍니다. 각 열은 별도의 단계를 나타내고 있으며 아래에 설명되어 있습니다.</p>
+
+<ul>
+<li>Unity 에디터에 에셋 <strong>임포트</strong>
+</li>
+<li>해당 에셋과 Unity 에디터를 사용하여 콘텐츠 <strong>생성</strong>
+</li>
+<li>앱 또는 게임 파일 <strong>빌드</strong> (선택사항으로 제공되는 콘텐츠 번들)</li>
+<li>퍼블리셔 또는 앱 스토어를 통해 사용자가 액세스할 수 있도록 빌드된 파일 <strong>배포</strong>
+</li>
+<li>사용자의 행동과 콘텐츠를 그룹화하고 번들로 묶은 방법에 따라 런타임 시 필요한 업데이트를 <strong>로드</strong>
+</li>
+</ul>
+
+<h3>임포트</h3>
+
+<p>임포트는 소스 파일을 Unity 에디터로 가져와 작업하는 프로세스입니다. 프로젝트의 <code>Assets</code> 폴더에 파일을 저장하거나 복사하면 Unity가 해당 파일을 임포트한 다음 Unity 에디터에서 작업할 수 있습니다.</p>
+
+<p>프로젝트에서 파일이 저장되는 위치, 각 유형의 에셋에 대한 임포트 설정을 조정하는 방법, 메타 파일의 용도, 에셋 데이터베이스가 임포트한 데이터를 저장하는 방법 등 Unity로 에셋을 임포트하는 몇 가지 기본기를 배우는 것이 중요합니다. 이 항목에 대한 자세한 내용은 <a href="ImportingAssets.html">에셋 임포트하기</a>를 참조하십시오.</p>
+
+<p><a href="UnityAccelerator.html">Unity 액셀러레이터</a>를 사용하여 팀과 협력하면 Unity의 에셋 처리 속도를 높일 수 있습니다.</p>
+
+<h3>생성</h3>
+
+<p>일단 프로젝트에 에셋을 임포트하면 게임이나 앱을 만들기 시작할 수 있습니다. 여기에는 일반적으로 에셋을 게임 오브젝트로서 하나 이상의 <a href="CreatingScenes.html">씬</a>에 배치하는 작업과 사용자가 에셋과 상호 작용하는 방식을 제어하는 <a href="ScriptingSection.html">스크립트</a>를 추가하는 작업이 포함됩니다.</p>
+
+<p>프로젝트 개발이 커짐에 따라 게임을 런타임 시 선택한 추가 콘텐츠를 점진적으로 다운로드할 수 있도록 에셋을 별도의 그룹으로 분할해야 할 수도 있습니다.</p>
+
+<p>생성 프로세스 중에 에셋을 별도의 <strong>번들</strong>로 그룹화하는 방법에 대한 전략을 결정하고 로드할 시기를 선택하는 코드를 구현할 수 있습니다.</p>
+
+<p>에셋을 번들로 그룹화하면 초기 다운로드 크기를 줄이고 나중에 런타임 시 일부 에셋을 로드할 수 있습니다. 이를 통해 게임 또는 앱의 다운로드 크기와 메모리 사용량을 최적화할 수 있습니다. 권장하는 방법으로 Unity의 <a href="com.unity.addressables.html">어드레서블</a> 시스템이 있습니다.</p>
+
+<h3>빌드</h3>
+
+<p>빌드는 완료된 프로젝트를 바이너리 파일로 익스포트하고 선택한 플랫폼에서 배포하고 실행할 수 있는 프로세스를 말합니다. 예를 들어, Windows용으로 빌드할 경우 Unity는 <code>.EXE</code> 파일과 함께 배포할 수 있는 몇 가지 데이터 첨부 파일을 생성합니다.</p>
+
+<p>어드레서블 또는 에셋 번들을 사용하여 에셋을 별도의 다운로드 가능한 번들로 그룹화하는 경우 해당 번들 파일도 배포용으로 빌드해야 합니다. </p>
+
+<p>자신의 컴퓨터에서 프로젝트를 빌드하거나, Unity 프로젝트에 대한 자동화된 빌드 생성 및 지속적 통합을 제공하는 Unity의 <a href="UnityCloudBuild.html">클라우드 빌드 서비스</a>를 사용할 수 있습니다.</p>
+
+<h3>배포</h3>
+
+<p>게임 또는 앱과 해당 콘텐츠 번들을 빌드한 후에는 사용자가 여기에 액세스할 수 있는 방법이 필요합니다. 배포 방법은 타겟 플랫폼에 따라 선택합니다.</p>
+
+<p>예를 들어, 모바일 플랫폼은 자체 앱 스토어를 가지고 있거나, 전문 퍼블리셔를 이용하거나, 자신의 서버에서 자체적으로 호스트할 수 있습니다.</p>
+
+<p>Unity는 자체 <a href="UnityCCD.html">클라우드 콘텐츠 전달</a> 서비스를 제공하여 게임이나 앱, 해당 콘텐츠를 호스트하고 사용자에게 전달할 수 있으며 Unity 개발 플랫폼에 완벽히 통합되어 있습니다. 이는 많은 시간을 절약할 수 있으며 정기적으로 콘텐츠 업데이트가 필요한 콘텐츠가 풍부한 라이브 게임이나 애플리케이션에 유용합니다.</p>
+
+<h3>로드</h3>
+
+<p>사용자가 게임이나 앱을 로드하고 사용할 때 로드 프로세스와 경험은 사용자가 설정한 규칙과 프로그래밍, 그리고 에셋을 그룹화하고 번들로 묶은 방법에 의해 정의됩니다.</p>
+
+<p>여기에 설명된 기술과 서비스를 조합하여 빠른 초기 다운로드, 프로젝트 수명 동안 롤아웃할 수 있는 지속적인 업데이트와 추가 콘텐츠를 제공할 수 있습니다.</p>
+
+<hr>
+
+<h2>아티스트 워크플로 이점</h2>
+
+<p>Unity의 에셋 워크플로는 Unity 에디터에서 직접 편집하고 디자인하기 쉽게 만들어 주는 툴과 기능을 갖추고 있습니다.</p>
+
+<ul>
+<li>다양한 <a href="BuiltInImporters.html">파일 포맷</a> 지원</li>
+<li>Unity와 타사 툴 간의 <a href="ImportingAssets.html">빠른 상호 전환</a>
+</li>
+<li>에셋 타입의 커스텀 기본 설정 적용을 위한 <a href="Presets.html">프리셋</a>
+</li>
+<li>
+<a href="com.unity.addressables.html">어드레서블</a>과 <a href="UnityCCD.html">클라우드 콘텐츠 전달</a>의 사용으로 원활한 라이브 콘텐츠 업데이트</li>
+</ul>
+
+<h2>프로그래머 워크플로 이점</h2>
+
+<ul>
+<li>맞춤형 콘텐츠 파이프라인(예를 들어, Unity가 에셋을 임포트하는 대로 처리하거나 자체 규칙에 따라 자동으로 적용되는 프리셋을 제어하기 위해 스크립트를 작성할 수 있습니다.)</li>
+<li>스크립팅을 통해 <a href="ModifyingSourceAssetsThroughScripting.html">소스 에셋을 수정</a>합니다. 게임 코드를 통해 머티리얼, 메시, 물리같은 소스 에셋을 조정할 수 있습니다.</li>
+<li>복잡한 프로젝트의 콘텐츠 관리를 단순화하고 자동 메모리 관리와 프로파일링 툴을 제공하는 <a href="com.unity.addressables.html">어드레서블 에셋 시스템</a>을 사용하여 메모리를 절약합니다.</li>
+<li>타겟 플랫폼에 맞게 에셋을 최적화합니다. 다중 플랫폼 프로젝트를 만들 때 수백 개의 서로 다른 텍스처가 있을 수 있으며, 모든 텍스처를 서로 다른 플랫폼에 대해 서로 다른 해상도로 패키징해야 합니다. Unity는 각 타겟 플랫폼에 빌드할 때 에셋을 자동으로 패키지, 크기 조절, 재압축합니다.</li>
+</ul>
+
+<h2>워크플로 고려 사항</h2>
+
+<p>Unity에서 에셋으로 작업할 때 사용할 수 있는 다양한 전략이 있습니다. 프로젝트에 적합한지는 팀 크기, 프로젝트 크기, 타겟 플랫폼, 해당 플랫폼의 메모리 유효성, 퍼블리싱 이후 업데이트, 패치, DLC를 릴리스할지 여부와 같은 여러 요인에 따라 다릅니다.</p>
+
+<p>예를 들어 팀으로 작업하는 경우 Unity의 임포트 결과를 캐시하고 팀 전체의 시간을 절약하기 위해 버전 관리 시스템과 함께 <a href="UnityAccelerator.html">캐시 서버</a>를 사용할 수 있습니다.</p>
+
+<p>별도의 번들로 퍼블리시하려는 많은 수의 에셋으로 작업하는 경우 에셋 그룹 중 일부를 별도의 프로젝트로 분리하여 팀 구성원이 해당 번들에서 작업하기 위해 하나의 거대한 프로젝트를 로드할 필요가 없도록 하는 것이 유용할 수 있습니다.</p>
+
+<h2>플랫폼 고려 사항</h2>
+
+<p>모든 에셋을 단일 프로젝트에 보관하는 경우 빌드를 실행할 때 Unity는 현재 선택한 플랫폼에 대해 올바른 포맷으로 에셋을 자동 빌드합니다. 그러나 에셋을 여러 프로젝트에 분할하여 번들을 별도로 빌드하는 경우 지원하는 각 플랫폼용 빌드를 만들어야 합니다. 자세한 내용은 어드레서블 문서의 <a href="https://docs.unity.cn/Packages/com.unity.addressables@latest?subfolder=/manual/AddressableAssetsGettingStarted.html%23building-for-multiple-platforms">다양한 플랫폼용으로 빌드</a>를 참조하십시오.</p>
+
+<p>또한 플랫폼의 특성은 런타임 에셋을 구성하는 방법의 제한과 가능성을 결정합니다. 예를 들어 스탠드얼론 플랫폼(PC 또는 macOS)에서는 가상 메모리가 거의 무제한의 메모리 풀을 제공하므로 <a href="SpecialFolders.html#Resources">리소스 폴더</a> 또는 큰 에셋 번들을 사용하더라도 일반적으로 메모리 문제가 발생하지 않습니다. 반대로 모바일 디바이스와 콘솔 플랫폼에는 일반적으로 가상 메모리가 제한적이거나 존재하지 않으므로 이러한 플랫폼용으로 구축된 앱은 에셋 로드 및 언로드를 보다 효율적으로 관리해야 합니다.</p>
+
+<p>플랫폼에 대한 사용자 기대도 중요한 고려 사항입니다. 예를 들어 모바일 플랫폼에서 초기 다운로드 및 설치 프로세스가 오래 걸리면 플레이어는 앱을 플레이하기 전에 포기하게 될 수 있습니다. 이러한 이유로 모바일 앱은 초기 빌드에 최소한의 에셋 세트만 포함하고 사용자가 앱을 처음 실행할 때 원격 서버에서 나머지 에셋을 다운로드하는 것이 일반적입니다.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AsyncReadManagerMetrics.html"></a></span><div class="tip">에셋 로드 지표</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportingAssets.html"></a></span><div class="tip">에셋 임포트</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

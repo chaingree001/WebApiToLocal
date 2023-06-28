@@ -1,0 +1,265 @@
+<!DOCTYPE html><html class="no-js" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="2D - Unity 매뉴얼">
+<title>2D - Unity 매뉴얼</title>
+<meta property="og:image" content="https://docs.unity.cn/kr/2021.3/uploads/Main/2dGames.jpg">
+<meta name="description" content="이 섹션은 Unity에서 2D 게임을 개발하는 사용자를 위한 문서를 제공합니다. 많은 Unity 문서고는 2D와 3D 개발 둘 다에 적용되며, 이 섹션은 2D에만 적용되는 기능과 특징에 대해 다룹니다.">
+<meta property="og:description" content="이 섹션은 Unity에서 2D 게임을 개발하는 사용자를 위한 문서를 제공합니다. 많은 Unity 문서고는 2D와 3D 개발 둘 다에 적용되며, 이 섹션은 2D에만 적용되는 기능과 특징에 대해 다룹니다.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'kr';
+      var page = 'Unity2D';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/kr/2021.3/Manual/Unity2D.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/Unity2D.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/Unity2D.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/Unity2D.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/Unity2D.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/Unity2D.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/Unity2D.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/Unity2D.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="매뉴얼 검색..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/Unity2D.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/Unity2D.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/Unity2D.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/Unity2D.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/Unity2D.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/Unity2D.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/Unity2D.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/Unity2D.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/Unity2D.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/Unity2D.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/Unity2D.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/Unity2D.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/Unity2D.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/Unity2D.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/Unity2D.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/Unity2D.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/Unity2D.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/Unity2D.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/Unity2D.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/Unity2D.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">매뉴얼</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">스크립팅 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">언어:
+        <span class="b">한국어</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/Unity2D.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/Unity2D.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/Unity2D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/Unity2D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/Unity2D.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/Unity2D.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>매뉴얼</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/kr/2022.1/Manual/Unity2D.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/kr/2021.3/Manual/Unity2D.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/kr/2021.2/Manual/Unity2D.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/kr/2021.1/Manual/Unity2D.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/kr/2020.3/Manual/Unity2D.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/kr/2020.2/Manual/Unity2D.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/kr/2020.1/Manual/Unity2D.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/kr/2019.4/Manual/Unity2D.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/kr/2019.3/Manual/Unity2D.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/kr/2019.2/Manual/Unity2D.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/kr/2019.1/Manual/Unity2D.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/kr/2018.4/Manual/Unity2D.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/kr/2018.3/Manual/Unity2D.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/kr/2018.2/Manual/Unity2D.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/kr/2018.1/Manual/Unity2D.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/kr/2017.4/Manual/Unity2D.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/kr/2017.3/Manual/Unity2D.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/kr/2017.2/Manual/Unity2D.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/kr/2017.1/Manual/Unity2D.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/kr/560/Manual/Unity2D.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>이 페이지가 있는 버전:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>이 페이지가 없는 버전:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>지원됨</li>
+<li>
+<div class="legacy-box"></div>레거시</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.3 (LTS)</a></li>
+<li>2D</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="xr_input.html"></a></span><div class="tip">Unity XR 입력</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Quickstart2D.html"></a></span><div class="tip">2D 게임 개발 퀵스타트 가이드</div>
+</div>
+</div></div>
+<h1>2D</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/2dGames.jpg" alt="">
+</figure>
+
+<p>이 섹션은 Unity에서 2D 게임을 개발하는 사용자를 위한 문서를 제공합니다. 많은 Unity 문서고는 2D와 3D 개발 둘 다에 적용되며, 이 섹션은 2D에만 적용되는 기능과 특징에 대해 다룹니다.</p>
+
+<p>2D와 3D 모드를 변경하는 방법과 모드 간 차이점은 <a href="2DAnd3DModeSettings.html">2D와 3D 모드 설정</a> 문서를 참조하십시오. 2D나 3D에서 작업해야 할지 확실하지 않은 경우에는 <a href="2Dor3D.html">2D 또는 3D 프로젝트</a>를 참조하십시오.</p>
+
+<h2>2D에서의 게임플레이</h2>
+
+<p>Unity는 3D 성능으로 유명하지만 2D 게임 제작에도 유용합니다. 에디터에서 주로 사용하는 기능을 대부분 사용할 수도 있으며, 2D 게임을 간편하게 제작할 수 있는 추가 기능도 제공합니다.</p>
+
+<figure>
+<img src="../uploads/Main/Overview2D.jpg" alt="2D 모드에서 본 씬">
+<figcaption>2D 모드에서 본 씬</figcaption>
+</figure>
+
+<p>눈에 띄는 기능은 씬 뷰에서 툴바에 있는 <em>2D</em> 뷰 모드 버튼입니다. 2D 모드가 활성화된 경우 직교 뷰(원근 없음)로 설정됩니다. 이 경우 카메라는 Z축을 따라 Y축의 양의 방향이 위를 향하도록 화면이 보입니다. 이를 통해 씬을 시각화하고 2D 오브젝트를 쉽게 배치할 수 있습니다.</p>
+
+<p>2D 컴포넌트 전체 리스트, 2D와 3D 모드 전환 방법, 2D와 3D 모드 설정 차이 등에 대한 자세한 내용은 <a href="2Dor3D.html">2D 또는 3D 프로젝트</a>를 참조하십시오.</p>
+
+<h2>2D 그래픽스</h2>
+
+<p>2D 그래픽 오브젝트는 <strong>스프라이트(Sprites)</strong> 라고 합니다. 스프라이트는 기본 텍스처이며, 개발 중에 효율성과 편리성을 위해 스프라이트 텍스처를 통합하고 관리할 수 있는 특수한 기술을 포함하고 있습니다. Unity는 내장형 <a href="SpriteEditor.html">스프라이트 에디터</a>를 제공하여 큰 이미지에서 스프라이트 그래픽스를 추출할 수 있도록 지원합니다. 이렇게 하면 이미지 에디터에서 단일 텍스처의 컴포넌트 이미지를 여러 개 편집할 수 있습니다. 예를 들어 한 이미지에서 캐릭터의 팔, 다리, 몸통을 별도의 요소로 분리하여 보관할 수 있습니다.</p>
+
+<p>스프라이트는 3D 오브젝트에 사용되는 <a href="class-MeshRenderer.html">메시 렌더러</a> 컴포넌트 대신 <a href="class-SpriteRenderer.html">스프라이트 렌더러</a> 컴포넌트를 사용하여 렌더링됩니다. 컴포넌트 메뉴(<strong>컴포넌트(Component) &gt; 렌더링(Rendering) &gt; 스프라이트 렌더러(Sprite Renderer)</strong>)를 통해 게임 오브젝트에 추가하거나, 메뉴(<strong>게임 오브젝트(GameObject) &gt; 2D 오브젝트(2D Object) &gt; 스프라이트(Sprite)</strong>)를 통해 스프라이트 렌더러가 이미 연결된 게임 오브젝트를 즉시 생성할 수 있습니다.</p>
+
+<p>또한 <a href="SpriteCreator.html">스프라이트 생성기</a> 툴을 사용하여 플레이스홀더 2D 이미지를 만들 수 있습니다.</p>
+
+<h2>2D 물리</h2>
+
+<p>Unity는 2D에서만 가능한 최적화 방법을 사용할 수 있도록 2D 물리만 다루는 별도의 물리 엔진을 사용합니다. 이 컴포넌트는 <a href="class-Rigidbody.html">리지드바디</a>, <a href="class-BoxCollider.html">박스 콜라이더</a>, <a href="class-HingeJoint.html">힌지 조인트</a>등과 같은 표준 3D 물리 컴포넌트에 각각 해당하지만 이름에 “2D”가 붙습니다. 따라서 스프라이트는 <a href="class-Rigidbody2D.html">리지드바디 2D</a>, <a href="class-BoxCollider2D.html">박스 콜라이더 2D</a>, <a href="class-HingeJoint2D.html">힌지 조인트 2D</a>에서 사용할 수 있습니다. 대부분의 2D 물리 컴포넌트는 그에 대응하는 3D 컴포넌트를 “평면화”한 것입니다. 예를 들어 <em>박스 콜라이더 2D</em> 는 사각형이지만 <em>박스 콜라이더</em> 는 정육면체입니다. 하지만 몇 가지 예외도 있습니다.</p>
+
+<p>2D 물리 컴포넌트의 전체 리스트는 <a href="2Dor3D.html">2D 또는 3D 프로젝트</a>를 참조하십시오. 2D 물리 개념과 컴포넌트에 대한 자세한 내용은 매뉴얼의 <a href="PhysicsSection.html">물리</a> 섹션을 참조하십시오. 2D 물리 설정을 지정하는 방법은 <a href="class-Physics2DManager.html">Physics 2D</a> 창을 참조하십시오.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–04–24 페이지 수정됨</span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="xr_input.html"></a></span><div class="tip">Unity XR 입력</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Quickstart2D.html"></a></span><div class="tip">2D 게임 개발 퀵스타트 가이드</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+</body>
+</html>

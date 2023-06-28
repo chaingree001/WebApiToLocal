@@ -1,0 +1,14 @@
+{
+  "name": "unityapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "unity.api.server.js",
+  "scripts": {
+    "start": "node  unity.api.server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mine-type": "^1.0.0"
+  }
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="no-js" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Tilemap - Unity マニュアル">
+<title>Tilemap - Unity マニュアル</title>
+<meta property="og:image" content="https://docs.unity.cn/ja/2021.3/uploads/Main/tilemap-properties-2021.1.png">
+<meta name="description" content="The Tilemap component is a system which stores and handles Tile Assets for creating 2D levels. It transfers the required information from the Tiles placed on it to other related components such as the Tilemap Renderer and the Tilemap Collider 2D. This package is not included in the Unity Editor default installation by default, and you will need to download the 2D Tilemap Editor package via the Package Manager.">
+<meta property="og:description" content="The Tilemap component is a system which stores and handles Tile Assets for creating 2D levels. It transfers the required information from the Tiles placed on it to other related components such as the Tilemap Renderer and the Tilemap Collider 2D. This package is not included in the Unity Editor default installation by default, and you will need to download the 2D Tilemap Editor package via the Package Manager.">
+<meta name="author" content="ユニティ テクノロジーズ">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'ja';
+      var page = 'class-Tilemap';
+      if(!page) page = 'index';
+      var version = '2021.3';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><script type="text/javascript" src="../StaticFiles/js/tinysegmenter.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity.cn/ja/2021.3/Manual/class-Tilemap.html">
+<link rel="alternate" href="https://docs.unity.cn/en/2021.3/Manual/class-Tilemap.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity.cn/cn/2021.3/Manual/class-Tilemap.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity.cn/ja/2021.3/Manual/class-Tilemap.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity.cn/es/2021.3/Manual/class-Tilemap.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity.cn/kr/2021.3/Manual/class-Tilemap.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity.cn/ru/2021.3/Manual/class-Tilemap.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity.cn/2021.3/Documentation/Manual/class-Tilemap.html" hreflang="x-default">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVTCJQL');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69a368c3131f2309a321e386accc19c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="マニュアル内を検索…" autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">マニュアル</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">スクリプトリファレンス</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.cn/">
+                unity.cn
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/ja/2022.1/Manual/class-Tilemap.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/ja/2021.3/Manual/class-Tilemap.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/ja/2021.2/Manual/class-Tilemap.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/ja/2021.1/Manual/class-Tilemap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/ja/2020.3/Manual/class-Tilemap.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/ja/2020.2/Manual/class-Tilemap.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/ja/2020.1/Manual/class-Tilemap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/ja/2019.4/Manual/class-Tilemap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/ja/2019.3/Manual/class-Tilemap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/ja/2019.2/Manual/class-Tilemap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/ja/2019.1/Manual/class-Tilemap.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/ja/2018.4/Manual/class-Tilemap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/ja/2018.3/Manual/class-Tilemap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/ja/2018.2/Manual/class-Tilemap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/ja/2018.1/Manual/class-Tilemap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/ja/2017.4/Manual/class-Tilemap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/ja/2017.3/Manual/class-Tilemap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/ja/2017.2/Manual/class-Tilemap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/ja/2017.1/Manual/class-Tilemap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/ja/560/Manual/class-Tilemap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>このページを含むバージョン:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>このページを含まないバージョン:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>サポートあり</li>
+<li>
+<div class="legacy-box"></div>サポートなし、非推奨</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">マニュアル</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">スクリプトリファレンス</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">言語:
+        <span class="b">日本語</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.3/Documentation/Manual/class-Tilemap.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.3/Manual/class-Tilemap.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.3/Manual/class-Tilemap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.3/Manual/class-Tilemap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.3/Manual/class-Tilemap.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.3/Manual/class-Tilemap.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>マニュアル</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.3</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/ja/2022.1/Manual/class-Tilemap.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/ja/2021.3/Manual/class-Tilemap.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/ja/2021.2/Manual/class-Tilemap.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/ja/2021.1/Manual/class-Tilemap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/ja/2020.3/Manual/class-Tilemap.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/ja/2020.2/Manual/class-Tilemap.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/ja/2020.1/Manual/class-Tilemap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/ja/2019.4/Manual/class-Tilemap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/ja/2019.3/Manual/class-Tilemap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/ja/2019.2/Manual/class-Tilemap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/ja/2019.1/Manual/class-Tilemap.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/ja/2018.4/Manual/class-Tilemap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/ja/2018.3/Manual/class-Tilemap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/ja/2018.2/Manual/class-Tilemap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/ja/2018.1/Manual/class-Tilemap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/ja/2017.4/Manual/class-Tilemap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/ja/2017.3/Manual/class-Tilemap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/ja/2017.2/Manual/class-Tilemap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/ja/2017.1/Manual/class-Tilemap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/ja/560/Manual/class-Tilemap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>このページを含むバージョン:</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>このページを含まないバージョン:</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>サポートあり</li>
+<li>
+<div class="legacy-box"></div>サポートなし、非推奨</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.3 (LTS)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li>Tilemap</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpriteShapeRenderer.html"></a></span><div class="tip">Sprite Shape Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Grid.html"></a></span><div class="tip">Grid</div>
+</div>
+</div></div>
+<h1>Tilemap</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Tilemap</strong> component is a system which stores and handles <a href="Tilemap-TileAsset.html">Tile Assets</a> for creating 2D levels. It transfers the required information from the Tiles placed on it to other related components such as the <a href="class-TilemapRenderer.html">Tilemap Renderer</a> and the <a href="class-TilemapCollider2D.html">Tilemap Collider 2D</a>. This package is not included in the Unity Editor default installation by default, and you will need to download the <strong>2D Tilemap Editor</strong> package via the <a href="https://docs.unity.cn/Documentation/Manual/Packages.html">Package Manager</a>.</p>
+
+<p><a href="Tilemap-CreatingTilemaps.html">タイルマップを作成</a> すると、<a href="class-Grid.html">Grid</a> コンポーネントが自動的にタイルマップの親となり、タイルマップにタイルをレイアウトする際のガイドとして機能します。</p>
+
+<p>タイルマップにペイントするタイルを作成、変更、選択するには、<a href="Tilemap-Palette.html">Tile Palette</a> (タイルパレット) (メニュー: <strong>Window &gt; 2D &gt; Tile Palette</strong>) とそのツールを使用します。詳細は、Tile Palette と <a href="Tilemap-Painting.html">タイルマップのペイント</a> のドキュメントを参照してください。</p>
+
+<figure>
+<img src="../uploads/Main/tilemap-properties-2021.1.png" alt="Tilemap property window.">
+<figcaption>Tilemap property window.</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">プロパティ</th>
+	<th style="text-align:left;">機能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Animation Frame Rate</strong></td>
+	<td style="text-align:left;">Unity がタイルアニメーションを再生するレート。これを増減すると、速度が該当する係数に応じて変更されます (例えば、これを 2 に設定すると、Unity は 2 倍の速度でタイルアニメーションを再生します)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color</strong></td>
+	<td style="text-align:left;">この Tilemap 上のタイルにティント (色) として適用する色を選択します。白 (デフォルト) に設定すると、Unity はタイルを無色でレンダリングします。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tile Anchor</strong></td>
+	<td style="text-align:left;">タイルマップ上のタイルアンカーの位置をオフセットするための XYZ 軸方向の値 (セル単位) を入力します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Orientation</strong></td>
+	<td style="text-align:left;">タイルマップ上のタイルの向きを選択します。特定の面に沿ってタイルを配置する必要がある場合に使用します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    XY</td>
+	<td style="text-align:left;">Unity は、タイルを XY 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    XZ</td>
+	<td style="text-align:left;">Unity は、タイルを XZ 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    YX</td>
+	<td style="text-align:left;">Unity は、タイルを YX 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    YZ</td>
+	<td style="text-align:left;">Unity は、タイルを YZ 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    ZX</td>
+	<td style="text-align:left;">Unity は、タイルを ZX 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    ZY</td>
+	<td style="text-align:left;">Unity は、タイルを ZY 面に沿って配置します。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Custom</td>
+	<td style="text-align:left;">これを選択すると、以下のカスタムの方向設定が可能になります。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offset</strong></td>
+	<td style="text-align:left;">カスタムオリエンテーションの位置オフセットを設定します。このオプションはデフォルトでは無効になっており、Tilemap の Orientation を Custom に設定すると有効になります。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rotation</strong></td>
+	<td style="text-align:left;">カスタムオリエンテーションの回転を設定します。このオプションはデフォルトでは無効になっており、Tilemap の Orientation を Custom に設定すると有効になります。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Scale</strong></td>
+	<td style="text-align:left;">カスタムオリエンテーションのスケールを設定します。このオプションは、デフォルトでは無効になっており、Tilemap の Orientation を Custom に設定すると有効になります。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Info</strong></td>
+	<td style="text-align:left;">Expand this to show the Assets used in the Tilemap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Tiles</td>
+	<td style="text-align:left;">Shows a list of Tile Assets used in the Tilemap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Sprites</td>
+	<td style="text-align:left;">Shows a list of Sprites used in the Tilemap.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>GitHub の 2D Extras</h2>
+
+<p>GitHub の <a href="https://github.com/Unity-Technologies/2d-extras">2D Extras</a> から <a href="Tilemap-ScriptableTiles.html">Tile</a> と <a href="Tilemap-ScriptableBrushes.html">Brush</a> のスクリプトをダウンロードできます。これらのプログラム記述されたゲームオブジェクトを使ったサンプルプロジェクトは <a href="https://github.com/Unity-Technologies/2d-techdemos#2d-techdemos">2D Techdemos</a> の Github リポジトリにあります。さまざまなスクリプトと使用法の説明は、各リポジトリの README.md を参照してください。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-history">Page content and screenshot updated for <a href="https://docs.unity.cn/2021.1/Documentation/Manual/30_search.html?q=newin20201">2021.1</a> <span class="search-words">NewIn20211</span></span></li>
+<li><span class="page-history">ページ内容とスクリーンショットは <a href="https://docs.unity.cn/2020.1/Documentation/Manual/30_search.html?q=newin20201">2020.1</a> に合わせて更新<span class="search-words">NewIn20201</span></span></li>
+<li><span class="page-edit"> 2D Tilemap エディターはエディターインストールに含まれていません。Package Manager 経由でダウンロードする必要があります。<a href="https://docs.unity.cn/2019.2/Documentation/Manual/30_search.html?q=newin20183">2019.2</a> <span class="search-words">NewIn20192</span></span></li>
+<li><span class="page-edit"> Isometric タイルマップ機能は Unity <a href="https://docs.unity.cn/2018.2/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> で追加<span class=" search-words "> NewIn20183</span> </span></li>
+<li><span class="page-edit">Hexagonal タイルマップ機能はUnity <a href="https://docs.unity.cn/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> で追加<span class=" search-words "> NewIn20182</span> </span></li>
+<li><span class="page-history">タイルマップは <a href="https://docs.unity.cn/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> で追加<span class="search-words">NewIn20172</span></span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpriteShapeRenderer.html"></a></span><div class="tip">Sprite Shape Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Grid.html"></a></span><div class="tip">Grid</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-flow: row wrap; border-top: #e6e6e6 1px solid; color: #455463; font-size: 14px; padding-top: 2px;"> <div style="display: flex; flex-flow: column nowrap; margin-right: 30px; width: 600px;"> <div style="display: flex; align-items: center;"> <div style="margin-right: 15px"> Copyright © 2020 Unity Technologies </div><div> 优美缔软件（上海）有限公司 版权所有 </div></div><div style="margin: 15px 0 5px 0;"> "Unity"、Unity 徽标及其他 Unity 商标是 Unity Technologies 或其附属机构在美国及其他地区的商标或注册商标。其他名称或品牌是其各自所有者的商标。 </div><div style="display: flex; flex-flow: row wrap; align-items: center; line-height: 20px;"> <div style="width: 20px; height: 20px; background-image: url('https://unity-cn-cdn-prd.unitychina.cn/assets/styles/i/china.d0289dc0a46fc5b15b3363ffa78cf6c7.png'); margin-right: 4px;"></div><div style="margin-right: 2px;">公安部备案号:</div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902002961" target="_blank" style="color: #00CCCC !important; cursor: pointer; text-decoration: none;">31010902002961</a> </div></div><div> <div style="display: flex; flex-flow: row wrap; align-items: center; margin-bottom: 20px;"> <a href="/legal" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">法律条款</a> <a href="/legal/privacy-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">隐私政策</a> <a href="/legal/cookie-policy" target="_blank" style="margin-right: 10px; text-decoration: none; color: #00CCCC !important">Cookies</a> </div><div> <a href="http://beian.miit.gov.cn" style="text-decoration: none; color: #00CCCC !important">沪ICP备13002771号-8</a> </div></div></div>
+<script type="text/javascript">(function(){var id="io6j3s669rgbrhnozmfzh8r2mf204n7q70a";var js=document.createElement("script");js.setAttribute("type","text/javascript");js.setAttribute("src","//deploy.mopinion.com/js/pastease.js");document.getElementsByTagName("head")[0].appendChild(js);var t=setInterval(function(){try{new Pastease.load(id);clearInterval(t)}catch(e){}},50)})();</script>
+</body>
+</html>

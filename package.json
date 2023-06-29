@@ -1,14 +1,15 @@
 {
   "name": "unityapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "unity.api.server.js",
   "scripts": {
-    "start": "node  unity.api.server.js"
+    "start": "node cluster.server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mine-type": "^1.0.0"
+    "mine-type": "^1.0.0",
+    "request": "^2.88.2"
   }
 }

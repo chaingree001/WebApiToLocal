@@ -4,8 +4,7 @@
   "description": "",
   "main": "unity.api.server.js",
   "scripts": {
-    "start": "node server.js",
-    "load": "node auto.load.server"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

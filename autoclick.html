@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  let autoloaded = false;
+  const autoClick = function () {
+    if (autoloaded) return;
+    autoloaded = true;
+    setTimeout(() => {
+      const cachestr = localStorage.getItem('AUTO_DATA');
+      const cache = cachestr && JSON.parse(cachestr) || { index: 0 };
+      const alist = document.querySelectorAll('.sidebar-menu ul li a');
+      const links = [...alist];
+      for (let i = cache.index+1; i < links.length; i++) {
+        const href = links[i].href;
+        localStorage.setItem('AUTO_DATA', JSON.stringify({ index: i }));
+        if (href.indexOf('127.0.0.1:8001/cn/2022.1') == -1 || href.indexOf('../') > 0) continue;
+        links[i].click();
+        break;
+      }
+    }, 0);
+
+  }
+  window.onload = autoClick;
+</script>

@@ -1,23 +1,25 @@
 const cluster = require("node:cluster");
+const path = require("node:path");
 const http = require("node:http");
 const fs = require("node:fs");
-const path = require("node:path");
 const mineType = require("mine-type");
 const numCPUs = require("node:os").availableParallelism(); // 获取CPU的个数
+cluster.schedulingPolicy = cluster.SCHED_RR;
 // 服务器ip地址
 // 在host文件中添加 proxy.docs.unity.cn 127.0.0.1
 // 则可以通过proxy.docs.unity.cn访问了
 const hostname = "127.0.0.1";
 // 服务端口
 const port = 8001;
-// 设置文档缓存时长，超过时长则拉取网上内容重新缓存
-const cacheTimes = 60 * 60 * 24 * 30 * 1000;
 // 代理地址
 const proxHost = "https://docs.unity.cn";
 // 代理首页
-const home = "/cn/2021.3/ScriptReference/index.html";
-
-cluster.schedulingPolicy = cluster.SCHED_RR;
+const home = "/cn/2021.3/Manual/index.html";
+// 缓存加速
+const cache = {};
+const hasCache = {};
+// 404页面
+const notFind = fs.readFileSync(path.resolve(__dirname, `./404.html`));
 
 const request = async function (type, url, header, localPath) {
   return new Promise((resolve, reject) => {
@@ -50,12 +52,16 @@ const request = async function (type, url, header, localPath) {
       });
   });
 };
+ 
+
+
 // 使用多进程
 if (cluster.isMaster) {
   for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 } else {
+ 
   // 创建缓存服务
   const server = http.createServer((req, res) => {
     const urlQuary = req.url.split("?");
@@ -72,27 +78,40 @@ if (cluster.isMaster) {
     const contentType = mineType.getContentType(type);
     const localPath = path.resolve(__dirname, `./cache/${key}.${type}`);
     res.setHeader("Content-Type", contentType);
+    if (hasCache[key]) {
+      res.end(cache[key]);
+      return;
+    }
     let hasFile = false;
     try {
       fs.accessSync(localPath, fs.constants.R_OK);
       hasFile = true;
-    } catch (err) {}
+    } catch (err) {
+      hasFile = false;
+    }
 
     if (hasFile) {
       try {
-        const cacheFile = fs.readFileSync(localPath);
-        res.end(cacheFile);
+        cache[key] = fs.readFileSync(localPath);
+        hasCache[key] = true;
+        res.end(cache[key]);
       } catch (err) {
+        hasCache[key] = false;
+        cache[key] = null;
         res.end();
       }
     } else {
       const realUrl = proxHost + url + (urlQuary[1] ? "?" + urlQuary[1] : "");
       request(type, realUrl, {}, localPath)
         .then((value) => {
+          hasCache[key] = true;
+          cache[key] = value;
           res.end(value);
         })
         .catch((reson) => {
-          res.end();
+          hasCache[key] = false;
+          cache[key] = null;
+          res.end(notFind);
         });
     }
   });

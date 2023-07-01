@@ -4,11 +4,13 @@
   "description": "",
   "main": "unity.api.server.js",
   "scripts": {
-    "start": "node cluster.server.js"
+    "start": "node cluster.server.js",
+    "load": "node auto.load.server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "is-online": "^10.0.0",
     "mine-type": "^1.0.0",
     "request": "^2.88.2"
   }

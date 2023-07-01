@@ -1,26 +1,8 @@
-const cluster = require("node:cluster");
 const path = require("node:path");
 const http = require("node:http");
 const fs = require("node:fs");
 const mineType = require("mine-type");
-const numCPUs = require("node:os").availableParallelism(); // 获取CPU的个数
-cluster.schedulingPolicy = cluster.SCHED_RR;
-// 服务器ip地址
-// 在host文件中添加 proxy.docs.unity.cn 127.0.0.1
-// 则可以通过proxy.docs.unity.cn访问了
-const hostname = "127.0.0.1";
-// 服务端口
-const port = 8001;
-// 代理地址
-const proxHost = "https://docs.unity.cn";
-// 代理首页
-const home = "/cn/2021.3/Manual/index.html";
-// 缓存加速
-const cache = {};
-const hasCache = {};
-// 404页面
-const notFind = fs.readFileSync(path.resolve(__dirname, `./404.html`));
-
+ 
 const request = async function (type, url, header, localPath) {
   return new Promise((resolve, reject) => {
     fetch(url, header)
@@ -52,16 +34,23 @@ const request = async function (type, url, header, localPath) {
       });
   });
 };
- 
 
-
-// 使用多进程
-if (cluster.isMaster) {
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-} else {
  
+  // 服务器ip地址
+  // 在host文件中添加 proxy.docs.unity.cn 127.0.0.1
+  // 则可以通过proxy.docs.unity.cn访问了
+  const hostname = "127.0.0.1";
+  // 服务端口
+  const port = 8001;
+  // 代理地址
+  const proxHost = "https://docs.unity.cn";
+  // 代理首页
+  const home = "/cn/2021.3/Manual/index.html";
+  // 缓存加速
+  const cache = {};
+  const hasCache = {};
+  // 404页面
+  const notFind = fs.readFileSync(path.resolve(__dirname, `./404.html`));
   // 创建缓存服务
   const server = http.createServer((req, res) => {
     const urlQuary = req.url.split("?");
@@ -121,4 +110,4 @@ if (cluster.isMaster) {
       `Server running at http://${hostname}:${port}  ${process.pid} `
     );
   });
-}
+ 

@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "is-online": "^10.0.0",
-    "mine-type": "^1.0.0",
-    "request": "^2.88.2"
+    "mine-type": "^1.0.0"
   }
 }

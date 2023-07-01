@@ -2,7 +2,21 @@ const path = require("node:path");
 const http = require("node:http");
 const fs = require("node:fs");
 const mineType = require("mine-type");
- 
+
+const scriptReg = /<script([\w\W]*?(?=<\/script>))<\/script>/g;
+const linkReg = /<link([\w\W]*?(?=>))>/g;
+const noscriptReg = /<noscript([\w\W]*?(?=<\/noscript>))<\/noscript>/g;
+const badurl = /'https:\/\/unity-cn-cdn-prd.*'/g;
+const resetJs = `
+<script>
+var docs_type = 'Manual';
+var lang = 'cn';
+var page = 'ScriptingToolsIDEs';
+if (!page) page = 'index';
+var version = '2022.1';
+var docs_versions = [];
+</script>`;
+
 const request = async function (type, url, header, localPath) {
   return new Promise((resolve, reject) => {
     fetch(url, header)
@@ -12,6 +26,26 @@ const request = async function (type, url, header, localPath) {
             response
               .text()
               .then((text) => {
+                if (/html/.test(type)) {
+                  text = text.toString();
+                  [noscriptReg, badurl].forEach((ritem) => {
+                    [...text.matchAll(ritem)].forEach((rhtml) => {
+                      text = text.replace(rhtml[0], "");
+                    });
+                  });
+
+                  [...text.matchAll(scriptReg)].forEach((rhtml) => {
+                    if (rhtml[0].indexOf("insertBefore") > 0)
+                      text = text.replace(rhtml[0], "");
+                    if (rhtml[0].indexOf("docs_versions") > 0)
+                      text = text.replace(rhtml[0], resetJs);
+                  });
+                  [...text.matchAll(linkReg)].forEach((rhtml) => {
+                    if (rhtml[0].indexOf("stylesheet") == -1)
+                      text = text.replace(rhtml[0], "");
+                  });
+                  text = text.replace(/[\r\n]+/g, "\n");
+                }
                 fs.writeFileSync(localPath, text);
                 resolve(text);
               })
@@ -35,79 +69,75 @@ const request = async function (type, url, header, localPath) {
   });
 };
 
- 
-  // 服务器ip地址
-  // 在host文件中添加 proxy.docs.unity.cn 127.0.0.1
-  // 则可以通过proxy.docs.unity.cn访问了
-  const hostname = "127.0.0.1";
-  // 服务端口
-  const port = 8001;
-  // 代理地址
-  const proxHost = "https://docs.unity.cn";
-  // 代理首页
-  const home = "/cn/2021.3/Manual/index.html";
-  // 缓存加速
-  const cache = {};
-  const hasCache = {};
-  // 404页面
-  const notFind = fs.readFileSync(path.resolve(__dirname, `./404.html`));
-  // 创建缓存服务
-  const server = http.createServer((req, res) => {
-    const urlQuary = req.url.split("?");
-    const baseUrl = urlQuary.length == 1 ? req.url : urlQuary[0];
-    if (baseUrl == "/") {
-      res.writeHead(301, { Location: "http://" + req.headers["host"] + home });
-      return res.end();
-    }
-    const url = baseUrl;
-    const fileType = url.match(/.*\.([\w\d]+)$/);
-    const type = (fileType && fileType[1]) || "html";
-    const lastReg = new RegExp(`${type}$`);
-    const key = url.replace(/[^\w\d-_]/g, "").replace(lastReg, "");
-    const contentType = mineType.getContentType(type);
-    const localPath = path.resolve(__dirname, `./cache/${key}.${type}`);
-    res.setHeader("Content-Type", contentType);
-    if (hasCache[key]) {
-      res.end(cache[key]);
-      return;
-    }
-    let hasFile = false;
-    try {
-      fs.accessSync(localPath, fs.constants.R_OK);
-      hasFile = true;
-    } catch (err) {
-      hasFile = false;
-    }
+// 服务器ip地址
+// 在host文件中添加 proxy.docs.unity.cn 127.0.0.1
+// 则可以通过proxy.docs.unity.cn访问了
+const hostname = "127.0.0.1";
+// 服务端口
+const port = 8001;
+// 代理地址
+const proxHost = "https://docs.unity.cn";
+// 代理首页
+const home = "/cn/2021.3/Manual/index.html";
+// 缓存加速
+const cache = {};
+const hasCache = {};
+// 404页面
+const notFind = fs.readFileSync(path.resolve(__dirname, `./404.html`));
+// 创建缓存服务
+const server = http.createServer((req, res) => {
+  const urlQuary = req.url.split("?");
+  const baseUrl = urlQuary.length == 1 ? req.url : urlQuary[0];
+  if (baseUrl == "/") {
+    res.writeHead(301, { Location: "http://" + req.headers["host"] + home });
+    return res.end();
+  }
+  const url = baseUrl;
+  const fileType = url.match(/.*\.([\w\d]+)$/);
+  const type = (fileType && fileType[1]) || "html";
+  const lastReg = new RegExp(`${type}$`);
+  const key = url.replace(/[^\w\d-_]/g, "").replace(lastReg, "");
+  const contentType = mineType.getContentType(type);
+  const localPath = path.resolve(__dirname, `./cache/${key}.${type}`);
+  res.setHeader("Content-Type", contentType);
+  if (hasCache[key]) {
+    res.end(cache[key]);
+    return;
+  }
+  let hasFile = false;
+  try {
+    fs.accessSync(localPath, fs.constants.R_OK);
+    hasFile = true;
+  } catch (err) {
+    hasFile = false;
+  }
 
-    if (hasFile) {
-      try {
-        cache[key] = fs.readFileSync(localPath);
+  if (hasFile) {
+    try {
+      cache[key] = fs.readFileSync(localPath);
+      hasCache[key] = true;
+      res.end(cache[key]);
+    } catch (err) {
+      hasCache[key] = false;
+      cache[key] = null;
+      res.end();
+    }
+  } else {
+    const realUrl = proxHost + url + (urlQuary[1] ? "?" + urlQuary[1] : "");
+    request(type, realUrl, {}, localPath)
+      .then((value) => {
         hasCache[key] = true;
-        res.end(cache[key]);
-      } catch (err) {
+        cache[key] = value;
+        res.end(value);
+      })
+      .catch((reson) => {
         hasCache[key] = false;
         cache[key] = null;
-        res.end();
-      }
-    } else {
-      const realUrl = proxHost + url + (urlQuary[1] ? "?" + urlQuary[1] : "");
-      request(type, realUrl, {}, localPath)
-        .then((value) => {
-          hasCache[key] = true;
-          cache[key] = value;
-          res.end(value);
-        })
-        .catch((reson) => {
-          hasCache[key] = false;
-          cache[key] = null;
-          res.end(notFind);
-        });
-    }
-  });
+        res.end(notFind);
+      });
+  }
+});
 
-  server.listen(port, hostname, () => {
-    console.log(
-      `Server running at http://${hostname}:${port}  ${process.pid} `
-    );
-  });
- 
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}  ${process.pid} `);
+});
